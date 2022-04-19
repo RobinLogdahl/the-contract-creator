@@ -1,0 +1,18 @@
+.page-header{
+    width: 100%;
+    background-color: hotpink;
+
+}
+
+.page-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: pink;
+}
+
+.contract-container{
+    width: 595px;
+    height: 842px;
+    border: solid 3px black;
+}

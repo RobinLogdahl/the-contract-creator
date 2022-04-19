@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "the-contract-creator", "the-contract-creator\the-contract-creator.csproj", "{22DA316B-9764-4E7B-9360-406B13CD6037}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{FDAD9C74-402A-45E8-A6CB-9922507ED9B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22DA316B-9764-4E7B-9360-406B13CD6037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22DA316B-9764-4E7B-9360-406B13CD6037}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22DA316B-9764-4E7B-9360-406B13CD6037}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22DA316B-9764-4E7B-9360-406B13CD6037}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDAD9C74-402A-45E8-A6CB-9922507ED9B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDAD9C74-402A-45E8-A6CB-9922507ED9B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDAD9C74-402A-45E8-A6CB-9922507ED9B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDAD9C74-402A-45E8-A6CB-9922507ED9B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B48203E-31AA-4CC2-99D7-6AEDA2D44A15}
+	EndGlobalSection
+EndGlobal
