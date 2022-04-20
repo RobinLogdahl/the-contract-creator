@@ -25,27 +25,26 @@ namespace Service
         private ContractService() { }
         public string ContractCreator(ContractDTO contract)
         {
-
             string source =
                 @"<div class=""contract-container"">
                     <div class=""buyer-container"">
                         <p class=""buyer-name"">{{buyerName}}</p>
                         <p class=""buyer-social"">{{buyerSocial}}</p>
-        <p class=""buyer-address"">{{buyerAddress}}</p>
-        <p class=""buyer-phone"">{{buyerPhone}}</p>
-    </div>
-    <div class=""seller-container"">
-        <p class=""seller-name"">{{sellerName}}</p>
-        <p class=""seller-social"">{{sellerSocial}}</p>
-        <p class=""seller-address"">{{sellerAddress}}</p>
-        <p class=""seller-phone"">{{sellerPhone}}</p>
-    </div>
-    <div class=""object-container"">
-        <p class=""object-name"">{{objectName}}</p>
-        <p class=""object-price"">{{objectPrice}}</p>
-        <p class=""object-other-info"">{{objectOtherInfo}}</p>
-    </div>
-</div>";
+                        <p class=""buyer-address"">{{buyerAddress}}</p>
+                        <p class=""buyer-phone"">{{buyerPhone}}</p>
+                    </div>
+                    <div class=""seller-container"">
+                        <p class=""seller-name"">{{sellerName}}</p>
+                        <p class=""seller-social"">{{sellerSocial}}</p>
+                        <p class=""seller-address"">{{sellerAddress}}</p>
+                        <p class=""seller-phone"">{{sellerPhone}}</p>
+                    </div>
+                    <div class=""object-container"">
+                        <p class=""object-name"">{{objectName}}</p>
+                        <p class=""object-price"">{{objectPrice}}</p>
+                        <p class=""object-other-info"">{{objectOtherInfo}}</p>
+                    </div>
+                </div>";
 
             var template = Handlebars.Compile(source);
 
