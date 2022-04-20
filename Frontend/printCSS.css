@@ -1,44 +1,9 @@
-* {
-    box-sizing: border-box;
-    margin: 0px;
-}
-body{
-    
-}
-.app{
-
-}
-
-.page-header{
-    width: 100%;
-    background-color: hotpink;
-
-}
-
-.page-footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: pink;
-}
-
-.title-text{
-
-}
-
-.bold-text{
-
-}
-
-.normal-text{
-
-}
 .contract-container{
+    font-size: 24pt;
     background-color: white;
     display: flex;
     flex-direction: column;
-    width: 595.28px;
-    height: 841.89px;
+    size: A4;
     border: solid 3px black;
 }
 .contract-header{
@@ -47,7 +12,7 @@ body{
     margin: 20px;
 }
 .contract-title{
-    font-size: 18px;
+    font-size: 28pt;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
 }
@@ -61,7 +26,7 @@ body{
     "address-value phone-value"
     ;
     grid-template-columns: 300px;
-    margin: 20px;
+    margin: 40px;
     gap: 5px;
     width: fit-content;
 }
@@ -199,91 +164,4 @@ body{
 }
 .name-clarification-buyer{
     grid-area: name-clarification-buyer;
-}
-
-.printable{
-        font-size: 8vw;
-        width: 2480px;
-        height: 3508px;
-}
-
-.printable .buyer-name-value{
-    width: 1200px;
-}
-.printable .buyer-social{
-    margin-left: 1100px;
-}
-.printable .buyer-social-value{
-    margin-left: 1100px;
-}
-.printable .buyer-phone{
-    margin-left: 1100px;
-}
-.printable .buyer-phone-value{
-    margin-left: 1100px;
-}
-.printable .buyer-address-value{
-    width: 1200px;
-}
-
-.printable .seller-name-value{
-    width: 1200px;
-}
-.printable .seller-social{
-    margin-left: 1100px;
-}
-.printable .seller-social-value{
-    margin-left: 1100px;
-}
-.printable .seller-phone{
-    margin-left: 1100px;
-}
-.printable .seller-phone-value{
-    margin-left: 1100px;
-}
-.printable .seller-address-value{
-    width: 1200px;
-}
-
-.printable .product-type{
-    width: 1200px;
-}
-.printable .product-type-value{
-    width: 1200px;
-}
-.printable .product-price{
-    margin-left: 1100px;
-}
-.printable .product-price-value{
-    margin-left: 1100px;
-}
-.printable .product-info{
-    width: 1200px;
-}
-.printable .product-info-value{
-    width: 1200px;
-}
-
-.printable .seller-place-date{
-    width: 1200px;
-}
-.printable .buyer-place-date{
-    margin-left: 1100px;
-}
-.printable .seller-sign{
-    width: 1200px;
-}
-.printable .buyer-sign{
-    margin-left: 1100px;
-}
-.printable .name-clarification-buyer{
-    margin-left: 900px;
-}
-.printable .name-clarification-seller{
-    width: 1200px;
-}
-
-
-.preview{
-    font-size: 12px;
 }

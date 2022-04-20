@@ -1,8 +1,5 @@
-
-
 const postContract = (e) => {
   e.preventDefault();
-  debugger
   fetch("https://localhost:7029/Contract/create", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -24,12 +21,13 @@ const postContract = (e) => {
       return response.text();
     })
     .then(function (html) {
-      debugger
       console.log(html);
       // let parser = new DOMParser();
       // let doc = parser.parseFromString(html, 'text/html');
-      var body = document.body;
-      body.innerHTML = html;
+      var app = document.getElementById("app")
+      app.innerHTML = html;
+      // var body = document.body;
+      // body.innerHTML = html;
     })
     .catch(function (err) {
       console.warn("Something went wrong.", err);
@@ -41,7 +39,7 @@ form.addEventListener('submit', postContract)
 
 
 const getHTML = () => {
-  fetch("https://localhost:7069/Contract/creator")
+  fetch("https://localhost:7029/Contract/create")
     .then(function (response) {
       return response.text();
     })
@@ -49,6 +47,8 @@ const getHTML = () => {
       console.log(html);
       // let parser = new DOMParser();
       // let doc = parser.parseFromString(html, 'text/html');
+      // var app = document.getelementById('app');
+      // app.innerHTML = html;
       var body = document.body;
       body.innerHTML = html;
     })
@@ -57,21 +57,19 @@ const getHTML = () => {
     });
 };
 
-// let GetFetch = (endpoint) => {
-//     return fetch(`${baseUrl}${endpoint}`);
-//   };
+const ChangeCSS = () => {
+  var myCSS = document.getElementById("contract-container")
+  myCSS.classList.remove("preview");
+  myCSS.classList.add("printable")
+}
 
-// const tryHandlebar = () =>{
-//     GetFetch("creator")
-//       .then((response) => response.json())
-//       .then((responsejson) => {
-//         const app = document.getElementById("app");
-//         const categories = document.createElement("h2");
+const GeneratePDF = () => {
+  ChangeCSS();
 
-//         app.appendChild(categories);
-//         app.appendChild(categoryList);
-//         });
+  var pdf = new jsPDF('p','px', 'A4');
+  pdf.addHTML(document.getElementById("contract-container"),function() {
+    pdf.save(`Köpeskontrakt_${form[8].value}.pdf`);
+  });
 
-// }
-
-// tryHandlebar();
+  location.reload();
+}
