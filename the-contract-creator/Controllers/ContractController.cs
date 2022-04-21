@@ -9,12 +9,26 @@ namespace the_contract_creator.Controllers
     [ApiController]
     public class ContractController : ControllerBase
     {
-        [HttpPost("create")]
-        public IActionResult ContractGenerator(ContractDTO input)
+        [HttpPost("purchase-agreement")]
+        public IActionResult PurchaseAgreement(PurchaseAgreementDTO input)
         {
             try
             {
-                return Ok(ContractService.Instance.ContractCreator(input));
+                return Ok(ContractService.Instance.PurchaseAgreementCreator(input));
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("rental-agreement")]
+        public IActionResult RentalAgreement(RentalAgreementDTO input)
+        {
+            try
+            {
+                return Ok(ContractService.Instance.RentalAgreementCreator(input));
 
             }
             catch (Exception ex)

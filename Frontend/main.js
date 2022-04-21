@@ -1,6 +1,6 @@
 const FormToContract = (e) => {
   e.preventDefault();
-  fetch("https://localhost:7029/Contract/create", {
+  fetch("https://localhost:7029/Contract/purchase-agreement", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
