@@ -1,4 +1,4 @@
-const postContract = (e) => {
+const FormToContract = (e) => {
   e.preventDefault();
   fetch("https://localhost:7029/Contract/create", {
     method: "POST",
@@ -21,13 +21,8 @@ const postContract = (e) => {
       return response.text();
     })
     .then(function (html) {
-      console.log(html);
-      // let parser = new DOMParser();
-      // let doc = parser.parseFromString(html, 'text/html');
       var app = document.getElementById("app")
       app.innerHTML = html;
-      // var body = document.body;
-      // body.innerHTML = html;
     })
     .catch(function (err) {
       console.warn("Something went wrong.", err);
@@ -35,41 +30,15 @@ const postContract = (e) => {
 };
 
 let form = document.getElementById('form');
-form.addEventListener('submit', postContract)
+form.addEventListener('submit', FormToContract)
 
+const GeneratePDF = (quality = 2) =>{
+    const filename  = `Köpeskontrakt_${form[8].value}.pdf`;
 
-const getHTML = () => {
-  fetch("https://localhost:7029/Contract/create")
-    .then(function (response) {
-      return response.text();
-    })
-    .then(function (html) {
-      console.log(html);
-      // let parser = new DOMParser();
-      // let doc = parser.parseFromString(html, 'text/html');
-      // var app = document.getelementById('app');
-      // app.innerHTML = html;
-      var body = document.body;
-      body.innerHTML = html;
-    })
-    .catch(function (err) {
-      console.warn("Something went wrong.", err);
-    });
-};
-
-const ChangeCSS = () => {
-  var myCSS = document.getElementById("contract-container")
-  myCSS.classList.remove("preview");
-  myCSS.classList.add("printable")
-}
-
-const GeneratePDF = () => {
-  ChangeCSS();
-
-  var pdf = new jsPDF('p','px', 'A4');
-  pdf.addHTML(document.getElementById("contract-container"),function() {
-    pdf.save(`Köpeskontrakt_${form[8].value}.pdf`);
-  });
-
-  location.reload();
+		html2canvas(document.querySelector('#contract-container'), {scale: quality})
+    .then(canvas => {
+			let pdf = new jsPDF('p', 'mm', 'a4');
+			pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 211, 298);
+			pdf.save(filename);
+		});
 }
