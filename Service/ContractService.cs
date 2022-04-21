@@ -26,7 +26,7 @@ namespace Service
         public string ContractCreator(ContractDTO contract)
         {
             string source =
-                @"<div class=""contract-container preview"" id=""contract-container"">
+                @"<div class=""contract-container printable"" id=""contract-container"">
                     <div class=""contract-header"">
                         <p class=""contract-title"">Köpeskontrakt</p>
                         <p class=""contract-object"">{{objectName}}</p>
