@@ -4,37 +4,58 @@
     <div class="preview-container">
         <div class="contract-container preview" id="contract-container">
             <div class="contract-header">
-                <p class="contract-title header-text">Köpeskontrakt</p>
-                <p class="contract-object title-text">{{objectName}}</p>
+                <p class="contract-title header-text">Hyreskontrakt</p>
+                <p class="contract-object title-text">{{objectAddress}}</p>
             </div>
             <div class="buyer-container">
-                <p class="buyer-title title-text">Köpare</p>
+                <p class="buyer-title title-text">Hyresgäst</p>
                 <p class="buyer-name contract-text">Namn</p>
                 <p class="buyer-name-value input-text">{{buyerName}}</p>
                 <p class="buyer-social contract-text">Personnummer</p>
                 <p class="buyer-social-value input-text">{{buyerSocial}}</p>
                 <p class="buyer-address contract-text">Adress</p>
                 <p class="buyer-address-value input-text">{{buyerAddress}}</p>
+                <p class="buyer-postal-code-value input-text">{{buyerPostalCode}}</p>
+                <p class="buyer-city-value inpit-text">{{buyerCity}}</p>
                 <p class="buyer-phone contract-text">Telefon</p>
                 <p class="buyer-phone-value input-text">{{buyerPhone}}</p>
+                <p class="buyer-email title-text">Email</p>
+                <p class="buyer-email-value contract-text">{{buyerEmail}}</p>
             </div>
             <div class="seller-container">
-                <p class="seller-title title-text">Säljare</p>
+                <p class="seller-title title-text">Hyresvärd</p>
                 <p class="seller-name contract-text">Namn</p>
                 <p class="seller-name-value input-text">{{sellerName}}</p>
                 <p class="seller-social contract-text">Personnummer</p>
                 <p class="seller-social-value input-text">{{sellerSocial}}</p>
                 <p class="seller-address contract-text">Adress</p>
                 <p class="seller-address-value input-text">{{sellerAddress}}</p>
+                <p class="seller-postal-code-value input-text">{{sellerPostalCode}}</p>
+                <p class="seller-city-value input-text">{{buyerCity}}</p>
                 <p class="seller-phone contract-text">Telefon</p>
                 <p class="seller-phone-value input-text">{{sellerPhone}}</p>
+                <p class="seller-email contract-text">Email</p>
+                <p class="seller-email-value input-text">{{sellerEmail}}</p>
             </div>
             <div class="product-container">
-                <p class="product-title title-text">Produkt</p>
-                <p class="product-type contract-text">Typ av produkt</p>
+                <p class="product-title title-text">Hyresobjekt</p>
+                <p class="product-type contract-text">Fastighetbetäckning</p>
                 <p class="product-type-value input-text">{{objectName}}</p>
+                <p class="product-type contract-text">Lägenhetsnummer</p>
+                <p class="product-type-value input-text">{{objectNumber}}</p>
+                <p class="product-address contract-text">Postadress</p>
+                <p class="product-address input-text"> {{objectAddress}}</p>
+                <p class="product-purpose contract-text">Uthyrningens ändamål</p>
+                <p class="product-purpose-value input-text">{{objectPurpose}}</p>
+
+                <p>Hyresobjektets omfattning</p>
+                <p class="product-amount-of-rooms contract-text">Antal rum exkl. kök</p>
+                <p class="product-amount-of-rooms-value input-text">{{amountOfRooms}}</p>
+                <p class="product-area contract-text">Total yta i kvm</p>
+                <p class="product-area-value input-text">{{Area}} kvm</p>
+
                 <p class="product-price contract-text">Pris</p>
-                <p class="product-price-value input-text">{{objectPrice}} kronor</p>
+                <p class="product-price-value input-text">{{objectPrice}} kronor/mån</p>
                 <p class="product-info contract-text">Annan information</p>
                 <p class="product-info-value input-text">{{objectOtherInfo}}</p>
             </div>

@@ -54,7 +54,7 @@ namespace Service
 
         public string RentalAgreementCreator(RentalAgreementDTO contract)
         {
-            string path = "..\\rentral-agreement.html";
+            string path = "..\\rental-agreement.html";
 
             string[] sourceArr = File.ReadAllLines(path);
 
@@ -64,7 +64,31 @@ namespace Service
 
             var data = new
             {
+                buyerName = contract.BuyerName,
+                buyerSocial = contract.BuyerSocialSecurity,
+                buyerAddress = contract.BuyerAddress,
+                buyerPostalCode = contract.BuyerPostalCode,
+                buyerCity = contract.BuyerCity,
+                buyerPhone = contract.BuyerPhone,
+                buyerEmail = contract.BuyerEmail,
 
+                sellerName = contract.SellerName,
+                sellerSocial = contract.SellerSocialSecurity,
+                sellerAddress = contract.SellerAddress,
+                sellerPostalCode = contract.SellerPostalCode,
+                sellerCity = contract.SellerCity,
+                sellerPhone = contract.SellerPhone,
+                sellerEmail = contract.SellerEmail,
+
+
+                objectName = contract.ObjectName,
+                objectNumber = contract.ObjectNumber,
+                objectAddress = contract.ObjectAddress,
+                objectPrice = contract.Price,
+                objectArea = contract.Area,
+                objectAmountOfRooms = contract.AmountOfRooms,
+                objectPurpose = contract.Purpose,
+                objectOtherInfo = contract.Other
             };
 
             var result = template(data);
