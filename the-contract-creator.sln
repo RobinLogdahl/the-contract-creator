@@ -9,6 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "txtfiles", "txtfiles", "{DFABD0D1-DD0C-403E-8DED-B241305C4F10}"
 	ProjectSection(SolutionItems) = preProject
+		buyer-info.html = buyer-info.html
+		contract-footer.html = contract-footer.html
+		contract-header.html = contract-header.html
 		purchase-agreement.html = purchase-agreement.html
 		rental-agreement.html = rental-agreement.html
 	EndProjectSection

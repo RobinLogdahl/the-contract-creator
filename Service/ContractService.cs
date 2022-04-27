@@ -94,5 +94,50 @@ namespace Service
             var result = template(data);
             return result;
         }
+
+        public string GenerateDynamicContract(BuyerDTO buyer, SellerDTO seller)
+        {
+            var header = FileToString("contract-header");
+
+            var buyerString = FileToString("buyer-info");
+
+            var sellerString = FileToString("seller-info");
+
+            var footer = FileToString("contract-footer");
+
+            var body = String.Concat(header, buyerString, sellerString, footer);
+
+            var template = Handlebars.Compile(body);
+
+            var oneBuyer = new
+            {
+                buyerName = buyer.BuyerName,
+                buyerSocial = buyer.BuyerSocialSecurity,
+                buyerAddress = buyer.BuyerAddress,
+                buyerPhone = buyer.BuyerPhone,
+            };
+
+            var oneSeller = new
+            {
+                sellerName = seller.SellerName,
+                sellerSocial = seller.SellerSocialSecurity,
+                sellerAddress = seller.SellerAddress,
+                sellerPhone = seller.SellerPhone,
+            };
+            var result = template(oneBuyer, oneSeller);
+
+            return result;
+        }
+
+        public string FileToString(string input)
+        {
+            string file = $"..\\{input}.html";
+
+            string[] fileArray = File.ReadAllLines(file);
+
+            string fileResult = String.Concat(fileArray);
+
+            return fileResult;
+        }
     }
 }
