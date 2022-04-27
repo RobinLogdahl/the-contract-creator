@@ -15,7 +15,6 @@ namespace the_contract_creator.Controllers
             try
             {
                 return Ok(ContractService.Instance.PurchaseAgreementCreator(input));
-
             }
             catch (Exception ex)
             {
@@ -36,5 +35,18 @@ namespace the_contract_creator.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        //[HttpPost("test-agreement")]
+        //public IActionResult DynamicCreator(BuyerDTO buyer, SellerDTO seller)
+        //{
+        //    try
+        //    {
+        //        return Ok(ContractService.Instance.GenerateDynamicContract(buyer, seller));
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
     }
 }
