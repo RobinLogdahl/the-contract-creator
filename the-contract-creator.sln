@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "txtfiles", "txtfiles", "{DFABD0D1-DD0C-403E-8DED-B241305C4F10}"
 	ProjectSection(SolutionItems) = preProject
 		purchase-agreement.html = purchase-agreement.html
+		rental-agreement-two-buyers.html = rental-agreement-two-buyers.html
 		rental-agreement.html = rental-agreement.html
 	EndProjectSection
 EndProject
