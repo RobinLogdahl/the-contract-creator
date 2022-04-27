@@ -1,3 +1,30 @@
+const Router = (e) => {
+  e.preventDefault();
+
+  let input = document.getElementById('agreement-types');
+
+  sessionStorage.setItem('agreement-type', input.value)
+
+  console.log(input.value)
+
+  FormFetcher(input.value)
+}
+
+const FormFetcher = (input) => {
+  fetch(`${input}-form.html`)
+    .then(response=> response.text())
+    .then(text=> document.getElementById('app').innerHTML = text);
+}
+
+const GetAllKeys = () => {
+  for(let key of keys) {
+    console.log(`${key}: ${sessionStorage.getItem(key)}`);
+  }
+}
+
+let test = document.getElementById('agreement-type-form')
+test.addEventListener('submit', Router)
+
 const FormToContract = (e) => {
   e.preventDefault();
   fetch("https://localhost:7029/Contract/purchase-agreement", {
@@ -29,6 +56,8 @@ const FormToContract = (e) => {
     });
 };
 
+// let form = document.getElementById('form');
+// form.addEventListener('submit', FormToContract)
 const FormToRental = (e) => {
   debugger
   e.preventDefault();
@@ -75,7 +104,6 @@ form.addEventListener('submit', FormToContract)
 
 let form2 = document.getElementById('form2');
 form2.addEventListener('submit', FormToRental)
-
 const GeneratePDF = (quality = 2) =>{
     const filename  = `Köpeskontrakt_${form[8].value}.pdf`;
 
