@@ -10,10 +10,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
   </head>
   <body>
-    <div class="app"id="app">
-      
+    <div class="header">
+      <button class="headerbutton" id="agreement-type-button">Starta här</button>
+      <button class="headerbutton" id="agreement-partys-button">Starta här</button>
+      <button class="headerbutton" id="purchase-agreement-button">Starta här</button>
+      <button class="headerbutton" id="rental-agreement-button">Starta här</button>
     </div>
-    <script src="main.js"></script>
+    <div class="app"id="app">
+      <form id="agreement-type-form" action="">
+        <label for="agreement-types">Vilken typ av avtal vill du ha?</label>
+        <select name="agreement-types" id="agreement-types">
+          <option value="purchase-agreement">Köpesavtal</option>
+          <option value="rental-agreement">Hyresavtal</option>
+        </select>
+        <br>
+        <input type="submit" value="Nästa" id="submit">
+      </form>
+    </div>
+    <script src="main.js" type="module"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
   </body>
