@@ -1,8 +1,9 @@
 import { SetLabel } from "../functions/form-creator.js";
 import { CreateForm } from "../functions/form-creator.js";
-import { GeneratePDF } from "../functions/create-pdf.js";
+import { GeneratePDF } from "../functions/pdf-creator.js";
 
 export const render = (app) => {
+
   const buyerFieldHeader = "Köpare";
   const buyerFields = [
     "buyerName",
@@ -44,7 +45,7 @@ export const render = (app) => {
   SetLabel("price-label", "Pris");
   SetLabel("other-label", "Annan information");
 
-  async function FormToContract(e) {
+  const FormToContract = (e) => {
     e.preventDefault();
     fetch("https://localhost:7029/Contract/purchase-agreement", {
       method: "POST",
@@ -70,20 +71,15 @@ export const render = (app) => {
         var app = document.getElementById("app");
         app.innerHTML = html;
       })
+      .then(function () {
+        let button = document.getElementById("SaveAsPDF");
+        button.addEventListener("click", GeneratePDF);
+      })
       .catch(function (err) {
         console.warn("Something went wrong.", err);
       });
-
-      let toPDFButton = await document.getElementById("SaveAsPDF")
-      await toPDFButton.addEventListener("click", GeneratePDF)
-
   };
-    
-    let form = document.getElementById("form");
-    form.addEventListener("submit", FormToContract);
-    
 
-
-  //   let button = document.getElementById('SaveAsPDF')
-  //   button.addEventListener('click', GeneratePDF)
+  let form = document.getElementById("form");
+  form.addEventListener("submit", FormToContract);
 };

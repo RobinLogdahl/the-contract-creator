@@ -56,10 +56,6 @@ registerChangeListener((newPage) => {
 // test.addEventListener("submit", Router);
 
 
-
-
-
-
 // let form = document.getElementById("form");
 // form.addEventListener("submit", FormToContract);
 
