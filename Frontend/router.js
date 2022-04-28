@@ -1,4 +1,4 @@
-let currentPage = "agreement-type-page";
+let currentPage = "purchase-agreement-page";
 let listeners = [];
 
 export const changePage = (newPage) => {

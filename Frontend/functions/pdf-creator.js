@@ -1,8 +1,8 @@
-export const GeneratePDF = (quality = 2) => {
+export const GeneratePDF = () => {
     const filename = `Köpeskontrakt_test.pdf`;
 
     html2canvas(document.querySelector("#contract-container"), {
-      scale: quality,
+      scale: 2,
     }).then((canvas) => {
       let pdf = new jsPDF("p", "mm", "a4");
       pdf.addImage(canvas.toDataURL("image/png"), "PNG", 0, 0, 211, 298);
@@ -10,15 +10,13 @@ export const GeneratePDF = (quality = 2) => {
     });
 };
 
-
-    
-    // html2canvas(document.querySelector("#contract-container"), {
-    //   scale: quality,
-    // }).then((canvas) => {
-    //   let pdf = new jsPDF("p", "mm", "a4");
-    //   pdf.addImage(canvas.toDataURL("image/png"), "PNG", 0, 0, 211, 298);
-    //   pdf.save(filename);
-    // });
+// html2canvas(document.querySelector("#contract-container"), {
+//   scale: quality,
+// }).then((canvas) => {
+//   let pdf = new jsPDF("p", "mm", "a4");
+//   pdf.addImage(canvas.toDataURL("image/png"), "PNG", 0, 0, 211, 298);
+//   pdf.save(filename);
+// });
 
 // var node = document.getElementById('my-node');
 
@@ -32,10 +30,10 @@ export const GeneratePDF = (quality = 2) => {
 //         console.error('oops, something went wrong!', error);
 //     });
 
-        // pdf.internal.scaleFactor = 30;
-        // pdf.addHTML($('#print-area')[0], function () {
-        //     pdf.save(calendarName);
-        // });
+// pdf.internal.scaleFactor = 30;
+// pdf.addHTML($('#print-area')[0], function () {
+//     pdf.save(calendarName);
+// });
 
 // $('#print').click(function() {
 
@@ -53,12 +51,9 @@ export const GeneratePDF = (quality = 2) => {
 //     });
 //   });
 
-
 // html2canvas(document.querySelector("#capture")).then(canvas => {
 //     document.body.appendChild(canvas)
 // });
-
-
 
 // html2canvas(element, {
 //     onrendered: function (canvas) {

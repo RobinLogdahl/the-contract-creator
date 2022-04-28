@@ -22,9 +22,9 @@ registerChangeListener((newPage) => {
     case "purchase-agreement-page":
       purchaseAgreementRender(app);
       break;
-    // case "rental-agreement-page":
-    //   rentalAgreementRender(app);
-    //   break;
+    case "rental-agreement-page":
+      rentalAgreementRender(app);
+      break;
   }
 });
 
