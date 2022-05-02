@@ -1,22 +1,28 @@
-import React, { Component, Fragment } from "react";
+import React from 'react'
+import { useState } from 'react'
+import Select from 'react-select'
+import NumberOfRenters from './NumberOfPartiesComponent';
 
-export class AgreementChoiceComponent extends Component {
-  continue = (e) => {
-    e.preventDefault();
-    this.props.nextStep();
-  };
-
-  render() {
-    const { values } = this.props;
-
+function TypeOfContract() {
+    const [selected, setSelected] = useState(0);
+    const options = [
+        { value: 0, label: 'Köpeskontrakt' },
+        { value: 1, label: 'Hyreskontrakt' }
+    ]
+    const handleChange = (e) => setSelected(e.value)
+    
     return (
-      <Fragment>
-          <h1>Vilken typ av avtal vill du ha?</h1>
-          <button onClick={values.PurchaseAgreement == true}>Köpesavtal</button>
-          <button onClick={values.PurchaseAgreement == true}>Hyresavtal</button>
-      </Fragment>
-    );
-  }
+        <div className='select'>
+            <Select
+                defaultValue={selected}
+                onChange={e => handleChange(e)}
+                options={options}>
+            </Select>
+            {selected == 0 ?
+            <p>tjena</p> : 
+            <NumberOfRenters/>}
+        </div>
+    )
 }
 
-export default AgreementChoiceComponent;
+export default TypeOfContract
