@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Select from 'react-select'
+import PurchaseAgreementComponent from './PurchaseAgreementComponent';
 
 function TypeOfSign() {
     const [selected, setSelected] = useState(0);
@@ -21,8 +22,6 @@ function TypeOfSign() {
         if (type2 === 'Hyreskontrakt' && renter2 === '2 Hyresgäster' && sign1 === 'Pappers signering') {
             console.log('Generera form')
         }
-
-
     }
     const handleChange = (e) => {
         setSelected(e.value)
@@ -38,10 +37,7 @@ function TypeOfSign() {
                 onChange={e => handleChange(e)}
                 options={options}>
             </Select>
-            {selected === 4 ?
-            <p>Pappers sign</p> : 
-            <p>E-sign</p>}
-            <button onClick={handleSubmit}>Generera avtal</button>
+            <button onClick={handleSubmit}>Generera Avtal</button>
         </div>
     )
 }
