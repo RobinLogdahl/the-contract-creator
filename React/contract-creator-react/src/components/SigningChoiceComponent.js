@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Select from 'react-select'
-import PurchaseAgreementComponent from './PurchaseAgreementComponent';
+import { FormFetcherComponent } from './FormFetcherComponent';
 
 function TypeOfSign() {
     const [selected, setSelected] = useState(0);
@@ -38,6 +38,7 @@ function TypeOfSign() {
                 options={options}>
             </Select>
             <button onClick={handleSubmit}>Generera Avtal</button>
+            <FormFetcherComponent />
         </div>
     )
 }
