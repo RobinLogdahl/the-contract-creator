@@ -9,7 +9,12 @@ function TypeOfContract() {
         { value: 0, label: 'Köpeskontrakt' },
         { value: 1, label: 'Hyreskontrakt' }
     ]
-    const handleChange = (e) => setSelected(e.value)
+    const handleChange = (e) => {
+        setSelected(e.value)
+        sessionStorage.removeItem(`0-key`);
+        sessionStorage.removeItem(`1-key`);
+        sessionStorage.setItem(`${e.value}-key`, e.label);
+    }
     
     return (
         <div className='select'>

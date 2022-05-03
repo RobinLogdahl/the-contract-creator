@@ -6,10 +6,15 @@ import TypeOfSign from './SigningChoiceComponent';
 function NumberOfRenters() {
     const [selected, setSelected] = useState(0);
     const options = [
-        { value: 0, label: '1 Hyregäst' },
-        { value: 1, label: '2 Hyresgäster' }
+        { value: 2, label: '1 Hyregäst' },
+        { value: 3, label: '2 Hyresgäster' }
     ]
-    const handleChange = (e) => setSelected(e.value)
+    const handleChange = (e) => {
+        setSelected(e.value)
+        sessionStorage.removeItem(`2-key`);
+        sessionStorage.removeItem(`3-key`);
+        sessionStorage.setItem(`${e.value}-key`, e.label);
+    }
     
     return (
         <div className='select'>
@@ -18,7 +23,7 @@ function NumberOfRenters() {
                 onChange={e => handleChange(e)}
                 options={options}>
             </Select>
-            {selected == 0 ?
+            {selected == 2 ?
             <p>tjena</p> : 
             <TypeOfSign/>}
         </div>
