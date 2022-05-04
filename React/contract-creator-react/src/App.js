@@ -1,13 +1,11 @@
-import TypeOfContract from "./components/AgreementChoiceComponent";
+import AgreementSelectorComponent from "./components/AgreementSelectorComponent";
 
 function App() {
   return (
     <div className='App'>
-      <TypeOfContract/>
+      <AgreementSelectorComponent/>
     </div>
-
   )
-
 }
 
 export default App;
