@@ -4,20 +4,19 @@ import PurchaseAgreementComponent from "./PurchaseAgreementComponent";
 import SaveToPDFComponent from "./SaveToPDFComponent";
 
 const FormFetcherComponent = (props) => {
+  const getSessionStorage = () => {
+    let agreementType = sessionStorage.getItem('Köpeskontrakt-key');
+    sessionStorage.getItem('Hyreskontrakt-key');
+    sessionStorage.getItem('1-key');
+    sessionStorage.getItem('2-key');
+    sessionStorage.getItem('Skriftligt-key');
+    sessionStorage.getItem('E-signering-key');
+    sessionStorage.clear();
+  };
 
-    const handleIncomingData = () => {
-        let arr = Object.values(props);
-        console.log(arr);
-        
-    }
-
-    handleIncomingData();
-
-    
   return (
     <Fragment>
-        <SaveToPDFComponent />   
-        <PurchaseAgreementComponent />
+      <PurchaseAgreementComponent />
     </Fragment>
   );
 };

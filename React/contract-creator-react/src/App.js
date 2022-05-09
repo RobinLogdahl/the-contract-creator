@@ -1,8 +1,11 @@
 import { useState } from "react";
 import StepNavigationComponent from "./components/StepNavigationComponent";
+
 import SelectAgreementComponent from "./components/SelectAgreementComponent";
 import SelectPartiesComponent from "./components/SelectPartiesComponent";
 import SelectSigningComponent from "./components/SelectSigningComponent";
+import FormFetcherComponent from "./components/FormFetcherComponent";
+import PreviewAgreementComponent from "./components/PreviewAgreementComponent";
 
 function App() {
   const labelArray = ["Step 1", "Step 2", "Step 3", "Step 4", "Step 5"];
@@ -23,11 +26,11 @@ function App() {
           case 3:
             return <SelectSigningComponent />;
           case 4:
-            return <p>här kommer formet</p>;
+            return <FormFetcherComponent />;
           case 5:
-            return <p>här kommer preview med pdf knapp</p>;
+            return <PreviewAgreementComponent />;
           default:
-            return <p>Default</p>;
+            return <p>Something went wrong, reload the page</p>;
         }
       })()}
 
@@ -38,13 +41,13 @@ function App() {
         />
       <button
         className="primaryButton"
-        onClick={() => updateStep(currentStep - 1)}
+        onClick={() => updateStep(currentStep - 1 === 0 ? currentStep : currentStep - 1)}
       >
         Previous Step
       </button>
       <button
         className="primaryButton"
-        onClick={() => updateStep(currentStep + 1) }
+        onClick={() => updateStep(currentStep + 1 === 6 ? currentStep : currentStep + 1)}
       >
         Next Step
       </button>

@@ -3,12 +3,13 @@ import { useState } from "react";
 import DropdownComponent from "./DropdownComponent";
 
 const SelectSigningComponent = (props) => {
-  const [signType, setSignType] = useState("1");
+  const [signType, setSignType] = useState("Skriftligt");
   console.log(props.value1)
 
   const handleSigningChange = (event) => {
     setSignType(event.target.value);
-    console.log(props.signType)
+    sessionStorage.removeItem('signing-key');
+    sessionStorage.setItem('signing-key', event.target.value);
   };
 
   return (

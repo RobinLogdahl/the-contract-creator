@@ -7,7 +7,8 @@ const SelectAgreementComponent = () => {
 
   const handleAgreementChange = (event) => {
     setAgreementType(event.target.value);
-    console.log(agreementType);
+    sessionStorage.removeItem('agreement-key');
+    sessionStorage.setItem('agreement-key', event.target.value);
   };
 
   return (

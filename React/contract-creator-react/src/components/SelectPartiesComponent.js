@@ -8,8 +8,8 @@ const SelectAgreementComponent = (props) => {
 
   const handleBuyerChange = (event) => {
     setBuyers(event.target.value);
-    console.log(props.AgreementType)
-    console.log(buyers);
+    sessionStorage.removeItem('parties-key');
+    sessionStorage.setItem('parties-key', event.target.value);
   };
 
   return (
