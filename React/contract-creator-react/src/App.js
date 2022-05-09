@@ -1,6 +1,10 @@
 import AgreementSelectorComponent from "./components/AgreementSelectorComponent";
+import {useState} from 'react'
+
 
 function App() {
+
+  const [currentStep, updateCurrentStep] = useState(1);
   return (
     <div className='App'>
       <AgreementSelectorComponent/>
