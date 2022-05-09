@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+body{
+    
+}
+.app{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.preview-container{
+    border: 2px dotted black;
+    width: 599.28px;
+    height: 845.89px;
+    margin: 40px;
+}
+.button-container{
+    order: -1;
+}
+.page-header{
+    width: 100%;
+    background-color: hotpink;
+
+}
+
+.page-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: pink;
+}
+
+.header-text{
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.title-text{
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.contract-text{
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.input-text{
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.contract-container{
+    order: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 595.28px;
+    height: 841.89px;
+
+}
+.contract-header{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.contract-title{
+
+}
+button{
+    margin-left: 40px;
+}
+.buyer-container{
+    display: grid;
+    grid-template-areas: 
+    "buyer-title buyer-title"
+    "name social"
+    "name-value social-value"
+    "address phone"
+    "address-value phone-value"
+    ;
+    grid-template-columns: 300px;
+    margin: 20px;
+    gap: 5px;
+    width: fit-content;
+}
+.buyer-title{
+    grid-area: buyer-title;
+}
+.buyer-name{
+    grid-area: name;
+
+}
+.buyer-name-value{
+    grid-area: name-value;
+
+}
+.buyer-social{
+    grid-area: social;
+}
+.buyer-social-value{
+    grid-area: social-value;
+}
+.buyer-address{
+    grid-area: address;
+}
+.buyer-address-value{
+    grid-area: address-value;
+}
+.buyer-phone{
+    grid-area: phone;
+}
+.buyer-phone-value{
+    grid-area: phone-value;
+}
+.seller-container{
+    display: grid;
+    grid-template-areas: 
+    "seller-title seller-title"
+    "name social"
+    "name-value social-value"
+    "address phone"
+    "address-value phone-value"
+    ;
+    grid-template-columns: 300px;
+    margin: 20px;
+    gap: 5px;
+    width: fit-content;
+}
+.seller-title{
+    grid-area: seller-title;
+}
+.seller-name{
+    grid-area: name;
+}
+.seller-name-value{
+    grid-area: name-value;
+}
+.seller-social{
+    grid-area: social;
+}
+.seller-social-value{
+    grid-area: social-value;
+}
+.seller-address{
+    grid-area: address;
+}
+.seller-address-value{
+    grid-area: address-value;
+}
+.seller-phone{
+    grid-area: phone;
+}
+.seller-phone-value{
+    grid-area: phone-value;
+}
+
+.product-container{
+    display: grid;
+    grid-template-areas: 
+    "product-title product-title"
+    "product price"
+    "product-value price-value"
+    "product-info product-info"
+    "product-info-value product-info-value"
+    ;
+    grid-template-columns: 300px;
+    margin: 20px;
+    gap: 5px;
+    width: fit-content;
+}
+.product-title{
+    grid-area: product-title;
+}
+.product-type{
+    grid-area: product;
+}
+.product-type-value{
+    grid-area: product-value;
+}
+.price{
+    grid-area: price-value;
+}
+.product-info{
+    grid-area: product-info;
+}
+.product-info-value{
+    grid-area: product-info-value;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+.signing-container{
+    display: grid;
+    grid-template-areas: 
+    "seller-place-date buyer-place-date"
+    "seller-date-line buyer-date-line"
+    "seller-sign buyer-sign"
+    "seller-signing-line buyer-signing-line"
+    "name-clarification-seller name-clarification-buyer"
+    "name-clarification-seller-value name-clarification-buyer-value"
+    ;
+    grid-template-columns: 300px;
+    margin: 20px;
+    gap: 5px;
+    width: fit-content;
+}
+.seller-date-line, .buyer-date-line, .seller-signing-line, .buyer-signing-line{
+    margin-top: 30px;
+    width: 200px;
+    border-top: dotted  black;
+    border-bottom: none;
+}
+.seller-place-date{
+    grid-area: seller-place-date;
+}
+.seller-date-line{
+    grid-area: seller-date-line;
+}
+.buyer-place-date{
+    grid-area: buyer-place-date;
+}
+.buyer-date-line{
+    grid-area: buyer-date-line;
+}
+.seller-sign{
+    grid-area: seller-sign;
+}
+.seller-signing-line{
+    grid-area: seller-signing-line;
+
+}
+.buyer-sign{
+    grid-area: buyer-sign;
+}
+.buyer-signing-line{
+    grid-area: buyer-signing-line;
+}
+.name-clarification-seller{
+    grid-area: name-clarification-seller;
+}
+.name-clarification-buyer{
+    grid-area: name-clarification-buyer;
+}
+.name-clarification-seller-value{
+    grid-area: name-clarification-seller-value; 
+}
+.name-clarification-buyer-value{
+    grid-area: name-clarification-buyer-value; 
+}
