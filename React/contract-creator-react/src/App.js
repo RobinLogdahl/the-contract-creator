@@ -15,24 +15,10 @@ function App() {
     updateCurrentStep(step);
   }
 
+  function handleSubmit() {}
+
   return (
     <div className="App">
-      {(() => {
-        switch (currentStep) {
-          case 1:
-            return <SelectAgreementComponent />
-          case 2:
-            return <SelectPartiesComponent />
-          case 3:
-            return <SelectSigningComponent />;
-          case 4:
-            return <FormFetcherComponent />;
-          case 5:
-            return <PreviewAgreementComponent />;
-          default:
-            return <p>Something went wrong, reload the page</p>;
-        }
-      })()}
 
       <StepNavigationComponent
         labelArray={labelArray}
@@ -41,16 +27,48 @@ function App() {
         />
       <button
         className="primaryButton"
-        onClick={() => updateStep(currentStep - 1 === 0 ? currentStep : currentStep - 1)}
-      >
-        Previous Step
+        onClick={() =>
+          updateStep(currentStep - 1 === 0 ? currentStep : currentStep - 1)
+        }
+        >
+        Föregående steg
       </button>
-      <button
+
+      {currentStep + 1 === 0 || currentStep + 1 === 1 || currentStep + 1 === 2 || currentStep + 1 === 3 || currentStep + 1 === 4 ? (
+        <button
         className="primaryButton"
-        onClick={() => updateStep(currentStep + 1 === 6 ? currentStep : currentStep + 1)}
-      >
-        Next Step
-      </button>
+        onClick={() =>
+          updateStep(currentStep + 1 === 5 ? currentStep : currentStep + 1)
+        }
+        >
+          Nästa steg
+        </button>
+      ) : (
+        <button
+        className="primaryButton"
+        onClick={() =>
+          updateStep(currentStep + 1 === 5 ? currentStep : currentStep + 1)
+        }
+        >
+          Generera Avtal
+        </button>
+      )}
+          {(() => {
+            switch (currentStep) {
+              case 1:
+                return <SelectAgreementComponent />;
+              case 2:
+                return <SelectPartiesComponent />;
+              case 3:
+                return <SelectSigningComponent />;
+              case 4:
+                return <FormFetcherComponent />;
+              case 5:
+                return <PreviewAgreementComponent />;
+              default:
+                return <p>Something went wrong, reload the page</p>;
+            }
+          })()}
     </div>
   );
 }

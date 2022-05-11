@@ -4,6 +4,7 @@ import PurchaseAgreementComponent from "./PurchaseAgreementComponent";
 import SaveToPDFComponent from "./SaveToPDFComponent";
 
 const FormFetcherComponent = (props) => {
+
   const getSessionStorage = () => {
     let agreementType = sessionStorage.getItem('Köpeskontrakt-key');
     sessionStorage.getItem('Hyreskontrakt-key');

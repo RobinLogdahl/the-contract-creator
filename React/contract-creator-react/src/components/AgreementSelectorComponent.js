@@ -67,7 +67,7 @@ const AgreementSelectorComponent = () => {
         onChange={handleSigningChange}
       />
       <button onClick={() => generateForm(data)}>Generera inmatning</button>
-      {myBool === true ? <FormFetcherComponent /> : <p>falsebool</p>}
+      {myBool === true ? <FormFetcherComponent value1={AgreementType} value2={Buyers} value3={SigningOptions}/> : <p>falsebool</p>}
     </div>
   );
 };
