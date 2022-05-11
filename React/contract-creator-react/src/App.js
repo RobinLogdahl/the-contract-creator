@@ -15,7 +15,7 @@ function App() {
     updateCurrentStep(step);
   }
 
-  function handleSubmit() {}
+  function handleSubmit(random) {}
 
   return (
     <div className="App">
