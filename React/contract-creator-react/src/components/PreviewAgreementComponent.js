@@ -29,34 +29,45 @@ function PreviewAgreementComponent() {
         other,
     } = useObjectComponent();
 
-    fetch("https://localhost:7029/Contract/purchase-agreement", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            buyerName: buyerName,
-            buyerSocialSecurity: buyerSocialSecurity,
-            buyerAddress: buyerAddress,
-            buyerPhone: buyerPhone,
-            sellerName: sellerName,
-            sellerSocialSecurity: sellerSocialSecurity,
-            sellerAddress: sellerAddress,
-            sellerPhone: sellerPhone,
-            object: object,
-            price: price,
-            other: other,
-        }),
-    })
-        .then(function (response) {
-            return response.text();
+
+    const handleButtonClicked = (event) => {
+        event.preventDefault();
+        fetch("https://localhost:7029/Contract/purchase-agreement", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                buyerName: buyerName,
+                buyerSocialSecurity: buyerSocialSecurity,
+                buyerAddress: buyerAddress,
+                buyerPhone: buyerPhone,
+                sellerName: sellerName,
+                sellerSocialSecurity: sellerSocialSecurity,
+                sellerAddress: sellerAddress,
+                sellerPhone: sellerPhone,
+                object: object,
+                price: price,
+                other: other,
+            }),
         })
-        .then(function (html) {
-            var root = document.getElementById("htmlinsert");
-            root.innerHTML = html;
-        })
-        .catch(function (err) {
-            console.warn("Something went wrong.", err);
-        });
-};
+            .then(function (response) {
+                return response.text();
+            })
+            .then(function (html) {
+                var root = document.getElementById("htmlinsert");
+                root.innerHTML = html;
+            })
+            .catch(function (err) {
+                console.warn("Something went wrong.", err);
+            });
 
 
-export default PreviewAgreementComponent;
+
+        return (
+            <div><button onClick={handleButtonClicked}>Generera Avtal</button></div>
+        )
+    };
+
+}
+
+
+export default PreviewAgreementComponent

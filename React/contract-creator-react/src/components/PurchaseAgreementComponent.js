@@ -22,42 +22,42 @@ function PurchaseAgreementComponent() {
     sellerPhone,
   } = useSellerOneInputComponent();
 
-  const { 
-    renderObject, 
-    object, 
-    price, 
+  const {
+    renderObject,
+    object,
+    price,
     other, } = useObjectComponent();
 
-  // const handleButtonClicked = (event) => {
-  //   event.preventDefault();
-  //   fetch("https://localhost:7029/Contract/purchase-agreement", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({
-  //       buyerName: buyerName,
-  //       buyerSocialSecurity: buyerSocialSecurity,
-  //       buyerAddress: buyerAddress,
-  //       buyerPhone: buyerPhone,
-  //       sellerName: sellerName,
-  //       sellerSocialSecurity: sellerSocialSecurity,
-  //       sellerAddress: sellerAddress,
-  //       sellerPhone: sellerPhone,
-  //       object: object,
-  //       price: price,
-  //       other: other,
-  //     }),
-  //   })
-  //     .then(function (response) {
-  //       return response.text();
-  //     })
-  //     .then(function (html) {
-  //       var root = document.getElementById("htmlinsert");
-  //       root.innerHTML = html;
-  //     })
-  //     .catch(function (err) {
-  //       console.warn("Something went wrong.", err);
-  //     });
-  // };
+  const handleButtonClicked = (event) => {
+    event.preventDefault();
+    fetch("https://localhost:7029/Contract/purchase-agreement", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        buyerName: buyerName,
+        buyerSocialSecurity: buyerSocialSecurity,
+        buyerAddress: buyerAddress,
+        buyerPhone: buyerPhone,
+        sellerName: sellerName,
+        sellerSocialSecurity: sellerSocialSecurity,
+        sellerAddress: sellerAddress,
+        sellerPhone: sellerPhone,
+        object: object,
+        price: price,
+        other: other,
+      }),
+    })
+      .then(function (response) {
+        return response.text();
+      })
+      .then(function (html) {
+        var root = document.getElementById("htmlinsert");
+        root.innerHTML = html;
+      })
+      .catch(function (err) {
+        console.warn("Something went wrong.", err);
+      });
+  };
 
   return (
     <div id="htmlinsert">
@@ -68,7 +68,7 @@ function PurchaseAgreementComponent() {
         {renderSeller}
         <p>Produkt</p>
         {renderObject}
-        {/* <button onClick={handleButtonClicked}>Generera Avtal</button> */}
+        <button onClick={handleButtonClicked}>Generera Avtal</button>
       </form>
     </div>
   );
