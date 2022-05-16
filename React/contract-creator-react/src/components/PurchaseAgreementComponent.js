@@ -72,7 +72,7 @@ function PurchaseAgreementComponent() {
           case false:
             return (
               <div>
-                <button className="primaryButton" onClick={()=>updateStep(currentStep - 1 === 0 ? currentStep : currentStep - 1)}>Föregående steg</button>
+                <button className="primaryButton">Föregående steg</button>
                 <button className="primaryButton" onClick={handleButtonClicked}>Visa Förhandsvisning</button>
               </div>
               
