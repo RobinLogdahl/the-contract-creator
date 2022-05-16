@@ -3,9 +3,9 @@ import StepNavigationComponent from "./components/StepNavigationComponent";
 import FormFetcherComponent from "./components/FormFetcherComponent";
 import PreviewAgreementComponent from "./components/PreviewAgreementComponent";
 import useSelectAgreementComponent from "./components/SelectAgreementComponent";
-import useSelectPartisComponent from "./components/SelectPartiesComponent";
-import useSelectSigningComponent from "./components/SelectSigningComponent";
-import SaveToPDFComponent from "./components/SaveToPDFComponent";
+
+import useSelectPartisComponent from "./components/SelectPartiesComponent"
+import useSelectSigningComponent from "./components/SelectSigningComponent"
 
 function App() {
   const labelArray = ["Step 1", "Step 2", "Step 3", "Step 4", "Step 5"];
@@ -18,9 +18,16 @@ function App() {
   const { renderAgreementTypeDropDown, agreementType } =
     useSelectAgreementComponent();
 
-  const { renderNumberOfBuyersDropDown, buyers } = useSelectPartisComponent();
 
-  const { renderSignTypeDropDown, signType } = useSelectSigningComponent();
+  const {
+    renderNumberOfBuyersDropDown,
+    buyers
+  } = useSelectPartisComponent()
+
+  const {
+    renderSignTypeDropDown,
+    signType
+  } = useSelectSigningComponent()
 
   return (
     <div className="App">
@@ -29,6 +36,7 @@ function App() {
         currentStep={currentStep}
         updateStep={updateStep}
       />
+
       {(() => {
         switch (currentStep) {
           case 1: case 2: case 3:
@@ -46,6 +54,7 @@ function App() {
             );
         }
       })()}
+
       {(() => {
         switch (currentStep) {
           case 1:
@@ -55,13 +64,9 @@ function App() {
           case 3:
             return <div>{renderSignTypeDropDown}</div>;
           case 4:
-            return (
-              <FormFetcherComponent
-                value1={agreementType}
-                value2={buyers}
-                value3={signType}
-              />
-            );
+
+            return <FormFetcherComponent value1={agreementType} value2={buyers} value3={signType} />;
+
           case 5:
             return <PreviewAgreementComponent />;
           default:

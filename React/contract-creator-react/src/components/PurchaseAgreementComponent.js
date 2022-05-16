@@ -21,7 +21,11 @@ function PurchaseAgreementComponent() {
     sellerPhone,
   } = useSellerOneInputComponent();
 
-  const { renderObject, object, price, other } = useObjectComponent();
+  const {
+    renderObject,
+    object,
+    price,
+    other, } = useObjectComponent();
 
   const handleButtonClicked = (event) => {
     event.preventDefault();
@@ -70,6 +74,7 @@ function PurchaseAgreementComponent() {
         {renderSeller}
         <p>Produkt</p>
         {renderObject}
+
       </form>
       </div>
     </div>
