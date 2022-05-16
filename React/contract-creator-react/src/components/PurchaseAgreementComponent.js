@@ -1,4 +1,5 @@
 import React from "react";
+import {useState} from 'react';
 import "./PurchaseAgreementComponent.css";
 import useBuyerOneInputComponent from "./BuyerOneInputComponent";
 import useSellerOneInputComponent from "./SellerOneInputComponent";
@@ -8,7 +9,7 @@ import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 
 function PurchaseAgreementComponent() {
-  let clickedButton = 1;
+  const [myBool, setBool] = useState(false);
 
   const {
     renderBuyer,
@@ -42,7 +43,6 @@ function PurchaseAgreementComponent() {
 
   const handleButtonClicked = (event) => {
     event.preventDefault();
-    clickedButton = 2;
     fetch("https://localhost:7029/Contract/purchase-agreement", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -70,28 +70,32 @@ function PurchaseAgreementComponent() {
       .catch(function (err) {
         console.warn("Something went wrong.", err);
       });
-  };
+      setBool(true);
+  }
+
 
   return (
     <div id="sdd">
       <div>
-        <button className="primaryButton">Börja om</button>
-        {(() => {
-          switch (clickedButton) {
-            case 1:
-              return (
-                <button className="primaryButton" onClick={handleButtonClicked}>
-                  Generera Avtal
-                </button>
+      {(() => {
+        switch (myBool) {
+          case false:
+            return (
+              <div>
+                <button className="primaryButton">Föregående steg</button>
+                <button className="primaryButton" onClick={handleButtonClicked}>Generera Avtal</button>
+              </div>
+              
               );
-            case 2:
-              return (
-                <button className="primaryButton" onClick={GeneratePDF}>
-                  Spara som PDF
-                </button>
-              );
-          }
-        })()}
+              case true:
+                return (
+                  <div>
+                <button className="primaryButton">Föregående steg</button>
+                <button className="primaryButton" onClick={GeneratePDF}>Spara som PDF</button>
+              </div>
+            );
+        }
+      })()}
       </div>
       <div id="htmlinsert">
         <form id="form">
