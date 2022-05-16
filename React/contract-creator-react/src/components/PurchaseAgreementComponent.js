@@ -7,6 +7,7 @@ import useObjectComponent from "./ObjectComponent";
 import html2canvas from "html2canvas";
 // import PDF, { Text, AddPage, Line, Image, Table, Html } from 'jspdf-react'
 import { jsPDF } from "jspdf";
+import ButtonNavigationComponent from "./ButtonNavigationComponent";
 
 function PurchaseAgreementComponent() {
   const [myBool, setBool] = useState(false);
@@ -73,10 +74,12 @@ function PurchaseAgreementComponent() {
       setBool(true);
   }
 
+  const { render, currentStep } = ButtonNavigationComponent();
 
   return (
     <div id="sdd">
-      <div>
+      <div className="navigationButtonContainer">
+      {render }
       {(() => {
         switch (myBool) {
           case false:
