@@ -4,9 +4,7 @@ import DropdownComponent from "./DropdownComponent";
 
 const useSelectPartisComponent = () => {
   const [buyers, setBuyers] = useState("1");
-  
-  //console.log(`useSelectAgreementComponent value: ${buyers}`)
-  
+
   return {
     buyers,
 
@@ -21,8 +19,8 @@ const useSelectPartisComponent = () => {
           onChange={(e) => setBuyers(e.target.value)}
         />
       </div>
-    )
-  }
+    ),
+  };
 };
 
 export default useSelectPartisComponent;

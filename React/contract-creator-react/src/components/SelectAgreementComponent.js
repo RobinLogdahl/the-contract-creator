@@ -5,8 +5,6 @@ import DropdownComponent from "./DropdownComponent";
 const useSelectAgreementComponent = () => {
   const [agreementType, setAgreementType] = useState("Köpeskontrakt");
 
-  //console.log(`useSelectAgreementComponent value: ${agreementType}`)
-
   return {
     agreementType,
 
@@ -20,8 +18,8 @@ const useSelectAgreementComponent = () => {
           ]}
           onChange={(e) => setAgreementType(e.target.value)}
         />
-      </div >
-    )
+      </div>
+    ),
   };
 };
 
