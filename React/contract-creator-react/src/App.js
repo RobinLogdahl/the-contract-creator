@@ -1,10 +1,8 @@
-import { useState } from "react";
-import StepNavigationComponent from "./components/StepNavigationComponent";
-import FormFetcherComponent from "./components/FormFetcherComponent";
+import FormFetcherComponent from "./components/NavigationFormFetcherComponent";
 import useSelectAgreementComponent from "./components/SelectAgreementComponent";
 import useSelectPartisComponent from "./components/SelectPartiesComponent";
 import useSelectSigningComponent from "./components/SelectSigningComponent";
-import ButtonNavigationComponent from "./components/ButtonNavigationComponent"
+import NavigationButtonComponent from "./components/NavigationButtonComponent"
 
 function App() {
   const { renderAgreementTypeDropDown, agreementType } =
@@ -14,7 +12,7 @@ function App() {
 
   const { renderSignTypeDropDown, signType } = useSelectSigningComponent();
 
-  const { renderNavButtons, currentStep } = ButtonNavigationComponent();
+  const { renderNavButtons, currentStep } = NavigationButtonComponent();
 
   return (
     <div className="App">

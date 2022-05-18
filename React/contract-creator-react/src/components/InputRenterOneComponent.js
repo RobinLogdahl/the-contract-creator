@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import "./PurchaseAgreementComponent.css";
-import FormComponent from "./FormComponent";
+import FormComponent from "./InputFormComponent";
 
-function useRenterOneComponent() {
+function InputRenterOne() {
     const [buyerName, setBuyerName] = useState("");
     const [buyerSocialSecurity, setBuyerSocial] = useState("");
     const [buyerAddress, setBuyerAddress] = useState("");
@@ -71,4 +71,4 @@ function useRenterOneComponent() {
   };
 }
 
-export default useRenterOneComponent;
+export default InputRenterOne;

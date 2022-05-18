@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import DropdownComponent from "./DropdownComponent";
+import DropdownComponent from "./NavigationDropdownComponent";
 
 const useSelectPartisComponent = () => {
   const [buyers, setBuyers] = useState("1");

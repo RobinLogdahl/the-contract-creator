@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import PurchaseAgreementComponent from "./PurchaseAgreementComponent";
-import SaveToPDFComponent from "./SaveToPDFComponent";
 import RentalAgreementComponent from "./RentalAgreementComponent";
 import RentalAgreementTwoBuyersComponent from "./RentalAgreementTwoBuyersComponent";
 

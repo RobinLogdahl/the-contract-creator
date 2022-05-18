@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import "./PurchaseAgreementComponent.css";
-import FormComponent from "./FormComponent";
+import FormComponent from "./InputFormComponent";
 
-function useLandlordOneComponent() {
+function InputLandlordOne() {
 
     const [sellerName, setSellerName] = useState("");
     const [sellerSocialSecurity, setSellerSocial] = useState("");
@@ -72,4 +72,4 @@ function useLandlordOneComponent() {
   };
 }
 
-export default useLandlordOneComponent;
+export default InputLandlordOne;

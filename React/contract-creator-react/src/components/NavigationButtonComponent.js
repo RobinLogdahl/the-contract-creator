@@ -1,7 +1,7 @@
 import { useState, Fragment } from "react";
-import StepNavigationComponent from "./StepNavigationComponent";
+import StepNavigationComponent from "./NavigationStepComponent";
 
-export default function ButtonNavigationComponent(props) {
+export default function NavigationButtonComponent(props) {
   const labelArray = ["", "", "", ""];
   const [currentStep, updateCurrentStep] = useState(1);
 

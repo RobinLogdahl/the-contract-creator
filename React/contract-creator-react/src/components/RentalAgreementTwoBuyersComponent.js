@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import "./PurchaseAgreementComponent.css";
-import useRenterOneComponent from "./RenterOneComponent";
-import useLandlordOneComponent from "./LandlordOneComponent";
-import useRenterObject from "./RenterObjectComponent";
+import InputRenterOne from "./InputRenterOneComponent";
+import InputLandlordOne from "./InputLandlordOneComponent";
+import InputRenterObject from "./InputRenterObjectComponent";
 import SaveToPDFComponent from "./SaveToPDFComponent";
 
 function RentalAgreementTwoBuyersComponent() {
@@ -12,6 +12,7 @@ function RentalAgreementTwoBuyersComponent() {
   const {
     renderPDFButton
   } =SaveToPDFComponent
+
   const {
     renderRenterOne,
     buyerName,
@@ -21,7 +22,7 @@ function RentalAgreementTwoBuyersComponent() {
     buyerCity,
     buyerPhone,
     buyerEmail,
-  } = useRenterOneComponent();
+  } = InputRenterOne();
 
   const {
     renderRenterOne2,
@@ -32,7 +33,7 @@ function RentalAgreementTwoBuyersComponent() {
     buyerCity2,
     buyerPhone2,
     buyerEmail2,
-  } = useRenterOneComponent();
+  } = InputRenterOne();
 
   const {
     renderLandlordOne,
@@ -43,7 +44,7 @@ function RentalAgreementTwoBuyersComponent() {
     sellerCity,
     sellerPhone,
     sellerEmail,
-  } = useLandlordOneComponent();
+  } = InputLandlordOne();
 
   const {
     renderObject,
@@ -55,7 +56,7 @@ function RentalAgreementTwoBuyersComponent() {
     objectAmountOfRooms,
     objectPurpose,
     other,
-  } = useRenterObject();
+  } = InputRenterObject();
 
   const handleButtonClicked = (event) => {
     event.preventDefault();
@@ -110,24 +111,20 @@ function RentalAgreementTwoBuyersComponent() {
   return (
     <div id="sdd">
       <div>
-        {(() => {
-          switch (myBool) {
-            case false:
-              return (
-                <div>
-                  <button className="primaryButton">Föregående steg</button>
-                  <button className="primaryButton" onClick={handleButtonClicked}>Visa Förhandsvisning</button>
-                </div>
+      {(() => {
+        switch (myBool) {
+          case false:
+            return (
+                <button className="primaryButton newButton" onClick={handleButtonClicked}>Generera Avtal</button>
               );
-            case true:
-              return (
-                <div>
-                  <button className="primaryButton">Föregående steg</button>
-                  {renderPDFButton}
-                </div>
-              );
-          }
-        })()}
+          case true:
+            return (
+              <div>
+                {renderPDFButton}
+              </div>
+            );
+        }
+      })()}
       </div>
       <div id="htmlinsert">
         <form id="form">
