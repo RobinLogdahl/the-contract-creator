@@ -11,7 +11,6 @@ const useSelectSigningComponent = (props) => {
     signType,
 
     renderSignTypeDropDown: (
-      <div>
         <DropdownComponent
           label="Signeringstyp"
           options={[
@@ -21,7 +20,6 @@ const useSelectSigningComponent = (props) => {
           onChange={(e) => setSignType(e.target.value)}
 
         />
-      </div>
     )
   }
 };

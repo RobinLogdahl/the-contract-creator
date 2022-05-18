@@ -9,7 +9,6 @@ import useSelectPartisComponent from "./components/SelectPartiesComponent";
 import useSelectSigningComponent from "./components/SelectSigningComponent";
 
 function App() {
-
   // function updateStep(step) {
   //   updateCurrentStep(step);
   // }
@@ -21,10 +20,13 @@ function App() {
 
   const { renderSignTypeDropDown, signType } = useSelectSigningComponent();
 
-  const { render, currentStep } = ButtonNavigationComponent();
+  const { renderNavButtons, currentStep } = ButtonNavigationComponent();
 
   return (
     <div className="App">
+      <div className="header">
+        <h1>Avtalsskaparen</h1>
+      </div>
       {/* <div className="navigationStepContainer">
         <StepNavigationComponent
           labelArray={labelArray}
@@ -32,8 +34,8 @@ function App() {
           updateStep={updateStep}
         />
       </div> */}
-      {render}
-            {/* <div className="navigationButtonContainer">
+
+      {/* <div className="navigationButtonContainer">
         {(() => {
           switch (currentStep) {
             case 1:
@@ -70,11 +72,11 @@ function App() {
         {(() => {
           switch (currentStep) {
             case 1:
-              return <div>{renderAgreementTypeDropDown}</div>;
+              return <div className="agreementType">{renderAgreementTypeDropDown}</div>
             case 2:
-              return <div>{renderNumberOfBuyersDropDown}</div>;
+              return <div className="buyers">{renderNumberOfBuyersDropDown}</div>
             case 3:
-              return <div>{renderSignTypeDropDown}</div>;
+              return <div className="signingType">{renderSignTypeDropDown}</div>
             case 4:
               return (
                 <FormFetcherComponent
@@ -90,6 +92,7 @@ function App() {
           }
         })()}
       </div>
+      {renderNavButtons}
     </div>
   );
 }

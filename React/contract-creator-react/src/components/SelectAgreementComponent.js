@@ -11,7 +11,6 @@ const useSelectAgreementComponent = () => {
     agreementType,
 
     renderAgreementTypeDropDown: (
-      <div>
         <DropdownComponent
           label="Avtalstyp"
           options={[
@@ -20,8 +19,7 @@ const useSelectAgreementComponent = () => {
           ]}
           onChange={(e) => setAgreementType(e.target.value)}
         />
-      </div >
-    )
+    ),
   };
 };
 

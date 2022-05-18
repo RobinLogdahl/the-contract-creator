@@ -11,8 +11,8 @@ export default function ButtonNavigationComponent(props) {
 
   return {
       currentStep,
-    render: (
-      <Fragment>
+      renderNavButtons: (
+      <Fragment className="StepNavigation">
         <div className="navigationStepContainer">
           <StepNavigationComponent
             labelArray={labelArray}
@@ -61,17 +61,7 @@ export default function ButtonNavigationComponent(props) {
                         )
                       }
                     >
-                      hejehj
-                    </button>
-                    <button
-                      className="primaryButton"
-                      onClick={() =>
-                        updateStep(
-                          currentStep + 1 === 5 ? currentStep : currentStep + 1
-                        )
-                      }
-                    >
-                      beepbooop
+                      Föregående steg
                     </button>
                   </div>
                 );

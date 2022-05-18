@@ -78,24 +78,16 @@ function PurchaseAgreementComponent() {
 
   return (
     <div id="sdd">
-      <div className="navigationButtonContainer">
-      {render }
+      <div className="navigationItems">
       {(() => {
         switch (myBool) {
           case false:
             return (
-              <div>
-                <button className="primaryButton">Föregående steg</button>
                 <button className="primaryButton" onClick={handleButtonClicked}>Generera Avtal</button>
-              </div>
-              
               );
               case true:
                 return (
-                  <div>
-                <button className="primaryButton">Föregående steg</button>
                 <button className="primaryButton" onClick={GeneratePDF}>Spara som PDF</button>
-              </div>
             );
         }
       })()}
