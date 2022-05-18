@@ -5,9 +5,7 @@ import useBuyerOneInputComponent from "./BuyerOneInputComponent";
 import useSellerOneInputComponent from "./SellerOneInputComponent";
 import useObjectComponent from "./ObjectComponent";
 import SaveToPDFComponent from "./SaveToPDFComponent"
-import html2canvas from "html2canvas";
-import { jsPDF } from "jspdf";
-// import ButtonNavigationComponent from "./ButtonNavigationComponent";
+
 
 function PurchaseAgreementComponent() {
   const [myBool, setBool] = useState(false);
@@ -68,7 +66,7 @@ function PurchaseAgreementComponent() {
   }
 
   return (
-    <div id="sdd">
+    <div id="formContainer">
       <div className="navigationItems">
       {(() => {
         switch (myBool) {
@@ -86,12 +84,9 @@ function PurchaseAgreementComponent() {
       })()}
       </div>
       <div id="htmlinsert">
-        <form id="form">
-          <p>Köparens uppgifter</p>
+        <form className="purchaseAgreementForm" id="form">
           {renderBuyer}
-          <p>Säljarens uppgifter</p>
           {renderSeller}
-          <p>Produkt</p>
           {renderObject}
         </form>
       </div>

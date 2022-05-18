@@ -16,7 +16,8 @@ function BuyerOneInputComponent() {
     buyerPhone,
 
     renderBuyer: (
-    <div className="buyerOneComponent">
+    <div className="buyerInfoContainer">
+      <p className="buyerInfo">Köparens uppgifter</p>
       <FormComponent
         label="För- och efternamn"
         id="buyerName"

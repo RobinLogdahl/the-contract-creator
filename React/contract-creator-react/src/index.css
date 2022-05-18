@@ -30,6 +30,7 @@ body{
 
 .navigationItems{
   width: 100%;
+  justify-content: center;
 }
 
 .newButton{
@@ -41,22 +42,62 @@ body{
   text-align: center;
 }
 
-.previousStep{
+/* .previousStep{
   position: absolute;
   margin-left: auto;
   margin-right: auto;
   top: 406px;
   left: 740px;
   text-align: center;
-}
+} */
 
-.nextStep{
+/* .nextStep{
   position: absolute;
   margin-left: auto;
   margin-right: auto;
   top: 406px;
   left: 50%;
   text-align: center;
+} */
+
+.formContainer{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.purchaseAgreementForm{
+  font-size: 18px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  align-items: top;
+  border: 2px solid green;
+  background-color: lightgray;
+  gap: 20px;
+  padding: 20px;
+}
+
+.purchaseAgreementForm label{
+
+}
+
+.purchaseAgreementForm input, textarea{
+
+}
+
+.buyerInfoContainer{
+
+}
+
+.sellerInfoContainer{
+
+}
+
+.productFormContainer{
+
 }
 
 .componentContainer{
@@ -83,10 +124,6 @@ label{
 
 }
 
-#form{
-  height: 200px
-}
-
 select{
   width: 200px;
   height: 30px;
@@ -104,11 +141,17 @@ select:hover{
 }
 
 .componentContainer{
+  font-size: 18px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
+  display: flex;
   height: 300px;
-  justify-self: center;
-  align-self: center;
-
+  justify-content: center;
+  align-content: center;
+  margin-top: 20px;
+}
+.signingType{
+  justify-content: center;
 }
 
 .navigationButtonContainer{

@@ -14,7 +14,8 @@ function useObjectComponent() {
     other,
 
     renderObject: (
-      <div className="buyerOneComponent">
+      <div className="productFormContainer">
+        <p className="productInfo">Produkt info</p>
         <FormComponent
           label="Typ av produkt"
           id="object"
