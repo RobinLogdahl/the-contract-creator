@@ -3,6 +3,8 @@ import StepComponent from "./StepComponent";
 
 
 export default function StepNavigationComponent(props) {
+    
+
     return (
         <div className="stepWrapper">
             {props.labelArray.map((item, index) => 

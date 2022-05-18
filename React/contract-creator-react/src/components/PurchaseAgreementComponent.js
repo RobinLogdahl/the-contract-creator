@@ -4,7 +4,9 @@ import "./PurchaseAgreementComponent.css";
 import useBuyerOneInputComponent from "./BuyerOneInputComponent";
 import useSellerOneInputComponent from "./SellerOneInputComponent";
 import useObjectComponent from "./ObjectComponent";
-import SaveToPDFComponent from "./SaveToPDFComponent";
+import html2canvas from "html2canvas";
+import { jsPDF } from "jspdf";
+import ButtonNavigationComponent from "./ButtonNavigationComponent";
 
 function PurchaseAgreementComponent() {
   const [myBool, setBool] = useState(false);
@@ -63,26 +65,20 @@ function PurchaseAgreementComponent() {
       setBool(true);
   }
 
+  const { render, currentStep } = ButtonNavigationComponent();
 
   return (
     <div id="sdd">
-      <div>
+      <div className="navigationItems">
       {(() => {
         switch (myBool) {
           case false:
             return (
-              <div>
-                <button className="primaryButton">Föregående steg</button>
-                <button className="primaryButton" onClick={handleButtonClicked}>Visa Förhandsvisning</button>
-              </div>
-              
+                <button className="primaryButton" onClick={handleButtonClicked}>Generera Avtal</button>
               );
               case true:
                 return (
-                  <div>
-                <button className="primaryButton">Föregående steg</button>
-                {renderPDFButton}
-              </div>
+                <button className="primaryButton" onClick={GeneratePDF}>Spara som PDF</button>
             );
         }
       })()}

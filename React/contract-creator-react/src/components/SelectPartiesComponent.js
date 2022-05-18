@@ -9,7 +9,6 @@ const useSelectPartisComponent = () => {
     buyers,
 
     renderNumberOfBuyersDropDown: (
-      <div>
         <DropdownComponent
           label="Antal köpare"
           options={[
@@ -18,9 +17,8 @@ const useSelectPartisComponent = () => {
           ]}
           onChange={(e) => setBuyers(e.target.value)}
         />
-      </div>
-    ),
-  };
+    )
+  }
 };
 
 export default useSelectPartisComponent;
