@@ -2,29 +2,26 @@ import React from "react";
 import { useState } from "react";
 import DropdownComponent from "./DropdownComponent";
 
-const SelectSigningComponent = (props) => {
+const useSelectSigningComponent = (props) => {
   const [signType, setSignType] = useState("Skriftligt");
-  console.log(props.value1)
 
-  const handleSigningChange = (event) => {
-    setSignType(event.target.value);
-    sessionStorage.removeItem('signing-key');
-    sessionStorage.setItem('signing-key', event.target.value);
-  };
+  //console.log(`useSelectAgreementComponent value: ${signType}`)
 
-  return (
-    <div>
-      <DropdownComponent
-        label="Signeringstyp"
-        options={[
-          { label: "Skriftligt", value: "Skriftligt" },
-          { label: "E-signering", value: "E-signering" },
-        ]}
-        value={signType}
-        onChange={handleSigningChange}
-      />
-    </div>
-  );
+  return {
+    signType,
+
+    renderSignTypeDropDown: (
+        <DropdownComponent
+          label="Signeringstyp"
+          options={[
+            { label: "Skriftligt", value: "Skriftligt" },
+            { label: "E-signering", value: "E-signering" },
+          ]}
+          onChange={(e) => setSignType(e.target.value)}
+
+        />
+    )
+  }
 };
 
-export default SelectSigningComponent;
+export default useSelectSigningComponent;
