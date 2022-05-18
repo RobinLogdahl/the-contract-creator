@@ -4,7 +4,7 @@ import FormFetcherComponent from "./components/FormFetcherComponent";
 import useSelectAgreementComponent from "./components/SelectAgreementComponent";
 import useSelectPartisComponent from "./components/SelectPartiesComponent";
 import useSelectSigningComponent from "./components/SelectSigningComponent";
-
+//add for merge
 function App() {
   const labelArray = ["Step 1", "Step 2", "Step 3", "Step 4", "Step 5"];
   const [currentStep, updateCurrentStep] = useState(1);
