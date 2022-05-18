@@ -5,8 +5,6 @@ import DropdownComponent from "./DropdownComponent";
 const useSelectSigningComponent = (props) => {
   const [signType, setSignType] = useState("Skriftligt");
 
-  //console.log(`useSelectAgreementComponent value: ${signType}`)
-
   return {
     signType,
 
@@ -18,7 +16,6 @@ const useSelectSigningComponent = (props) => {
             { label: "E-signering", value: "E-signering" },
           ]}
           onChange={(e) => setSignType(e.target.value)}
-
         />
     )
   }
