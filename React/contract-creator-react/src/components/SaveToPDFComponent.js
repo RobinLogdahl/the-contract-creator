@@ -18,9 +18,7 @@ const SaveToPDFComponent = () => {
     
     return {
       renderPDFButton:
-        <div>
-            <button className="primaryButton" onClick={GeneratePDF}>Spara som PDF</button>
-        </div>
+            <button className="primaryButton newButton" onClick={GeneratePDF}>Spara som PDF</button>
     }
   };
 

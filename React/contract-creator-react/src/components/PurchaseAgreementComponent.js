@@ -4,9 +4,10 @@ import "./PurchaseAgreementComponent.css";
 import useBuyerOneInputComponent from "./BuyerOneInputComponent";
 import useSellerOneInputComponent from "./SellerOneInputComponent";
 import useObjectComponent from "./ObjectComponent";
+import SaveToPDFComponent from "./SaveToPDFComponent"
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
-import ButtonNavigationComponent from "./ButtonNavigationComponent";
+// import ButtonNavigationComponent from "./ButtonNavigationComponent";
 
 function PurchaseAgreementComponent() {
   const [myBool, setBool] = useState(false);
@@ -34,6 +35,7 @@ function PurchaseAgreementComponent() {
   const { renderObject, object, price, other } = useObjectComponent();
 
   const handleButtonClicked = (event) => {
+    debugger
     event.preventDefault();
     fetch("https://localhost:7029/Contract/purchase-agreement", {
       method: "POST",
@@ -56,16 +58,14 @@ function PurchaseAgreementComponent() {
         return response.text();
       })
       .then(function (html) {
-        var root = document.getElementById("htmlinsert");
-        root.innerHTML = html;
+        var getHTML = document.getElementById("htmlinsert");
+        getHTML.innerHTML = html;
       })
       .catch(function (err) {
         console.warn("Something went wrong.", err);
       });
       setBool(true);
   }
-
-  const { render, currentStep } = ButtonNavigationComponent();
 
   return (
     <div id="sdd">
@@ -74,11 +74,13 @@ function PurchaseAgreementComponent() {
         switch (myBool) {
           case false:
             return (
-                <button className="primaryButton" onClick={handleButtonClicked}>Generera Avtal</button>
+                <button className="primaryButton newButton" onClick={handleButtonClicked}>Generera Avtal</button>
               );
-              case true:
-                return (
-                <button className="primaryButton" onClick={GeneratePDF}>Spara som PDF</button>
+          case true:
+            return (
+              <div>
+                {renderPDFButton}
+              </div>
             );
         }
       })()}
