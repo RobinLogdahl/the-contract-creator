@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./PurchaseAgreementComponent.css";
 import FormComponent from "./FormComponent";
 
-function useRenterObject() {
+function InputRenterObject() {
 
     const [objectName, setObjectName] = useState("");
     const [objectNumber, setObjectNumber] = useState("");
@@ -80,4 +80,4 @@ function useRenterObject() {
   };
 }
 
-export default useRenterObject;
+export default InputRenterObject;

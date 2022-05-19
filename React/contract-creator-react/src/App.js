@@ -1,10 +1,10 @@
 import { useState } from "react";
-import StepNavigationComponent from "./components/StepNavigationComponent";
-import FormFetcherComponent from "./components/FormFetcherComponent";
+import StepNavigationComponent from "./components/NavStepComponent";
+import NavFormSelector from "./components/NavFormSelectorComponent";
 import useSelectAgreementComponent from "./components/SelectAgreementComponent";
 import useSelectPartisComponent from "./components/SelectPartiesComponent";
 import useSelectSigningComponent from "./components/SelectSigningComponent";
-import ButtonNavigationComponent from "./components/ButtonNavigationComponent"
+import NavButton from "./components/NavButtonComponent"
 import image from "../src/images/agreementlogo.PNG";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
 
   const { renderSignTypeDropDown, signType } = useSelectSigningComponent();
 
-  const { renderNavButtons, currentStep } = ButtonNavigationComponent();
+  const { renderNavButtons, currentStep } = NavButton();
 
   const Refresh = () =>{
     window.location.reload();
@@ -38,7 +38,7 @@ function App() {
               return <div className="signingType">{renderSignTypeDropDown}</div>
             case 4:
               return (
-                <FormFetcherComponent
+                <NavFormSelector
                   value1={agreementType}
                   value2={buyers}
                   value3={signType}

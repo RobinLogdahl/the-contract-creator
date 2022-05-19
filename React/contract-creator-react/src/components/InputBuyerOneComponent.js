@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./PurchaseAgreementComponent.css";
 import FormComponent from "./FormComponent";
 
-function BuyerOneInputComponent() {
+function InputBuyerOne() {
   const [buyerName, setBuyerName] = useState("");
   const [buyerSocialSecurity, setBuyerSocial] = useState("");
   const [buyerAddress, setBuyerAddress] = useState("");
@@ -44,4 +44,4 @@ function BuyerOneInputComponent() {
   }
 }
 
-export default BuyerOneInputComponent;
+export default InputBuyerOne;

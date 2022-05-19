@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./PurchaseAgreementComponent.css";
 import FormComponent from "./FormComponent";
 
-function useObjectComponent() {
+function InputObject() {
     const [object, setObject] = useState("");
     const [price, setPrice] = useState("");
     const [other, setOther] = useState("");
@@ -36,4 +36,4 @@ function useObjectComponent() {
   };
 }
 
-export default useObjectComponent;
+export default InputObject;

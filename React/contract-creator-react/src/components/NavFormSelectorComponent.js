@@ -4,7 +4,7 @@ import SaveToPDFComponent from "./SaveToPDFComponent";
 import RentalAgreementComponent from "./RentalAgreementComponent";
 import RentalAgreementTwoBuyersComponent from "./RentalAgreementTwoBuyersComponent";
 
-const FormFetcherComponent = (props) => {
+const NavFormSelector = (props) => {
   let arr = Object.values(props);
   console.log(arr);
   const [value1, value2, value3] = arr;
@@ -29,4 +29,4 @@ const FormFetcherComponent = (props) => {
   );
 };
 
-export default FormFetcherComponent;
+export default NavFormSelector;

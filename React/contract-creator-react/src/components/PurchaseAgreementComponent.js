@@ -1,9 +1,9 @@
 import React from "react";
 import {useState} from 'react';
 import "./PurchaseAgreementComponent.css";
-import useBuyerOneInputComponent from "./BuyerOneInputComponent";
-import useSellerOneInputComponent from "./SellerOneInputComponent";
-import useObjectComponent from "./ObjectComponent";
+import InputBuyerOne from "./InputBuyerOneComponent";
+import InputSellerOne from "./InputSellerOneComponent";
+import InputObject from "./InputObjectComponent";
 import SaveToPDFComponent from "./SaveToPDFComponent"
 
 
@@ -20,7 +20,7 @@ function PurchaseAgreementComponent() {
     buyerSocialSecurity,
     buyerAddress,
     buyerPhone,
-  } = useBuyerOneInputComponent();
+  } = InputBuyerOne();
 
   const {
     renderSeller,
@@ -28,9 +28,9 @@ function PurchaseAgreementComponent() {
     sellerSocialSecurity,
     sellerAddress,
     sellerPhone,
-  } = useSellerOneInputComponent();
+  } = InputSellerOne();
 
-  const { renderObject, object, price, other } = useObjectComponent();
+  const { renderObject, object, price, other } = InputObject();
 
   const handleButtonClicked = (event) => {
     debugger
@@ -72,7 +72,7 @@ function PurchaseAgreementComponent() {
         switch (myBool) {
           case false:
             return (
-                <button className="primaryButton newButton" onClick={handleButtonClicked}>Generera Avtal</button>
+                <button className="primaryButton newButton" onClick={handleButtonClicked}>Visa Förhandsvisning</button>
               );
           case true:
             return (

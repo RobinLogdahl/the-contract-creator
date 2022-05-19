@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import StepComponent from "./StepComponent";
+import StepComponent from "./NavStepCounterComponent";
 
 
 export default function StepNavigationComponent(props) {
