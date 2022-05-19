@@ -34,16 +34,22 @@ body{
 .header{
   color: black;
   display: flex;
+  flex-direction: column;
   grid-area: header;
+  border: 1px solid black;
   width: 100%;
-  height: 40px;
-  align-items: center;
+  height: 65px;
   background-color: white;
   justify-content: center;
-  border-bottom: 1px solid;
   font-size: 18px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   gap: 10px;
+}
+.logoContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px
 }
 
 .navigationItems{
@@ -55,7 +61,7 @@ body{
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  top: 406px;
+  top: 90px;
   right: 36%;
   text-align: center;
 }
@@ -64,7 +70,7 @@ body{
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  top: 406px;
+  top: 90px;
   left: 36%;
   text-align: center;
 }
@@ -73,7 +79,7 @@ body{
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  top: 406px;
+  top: 90px;
   right: 36%;
   text-align: center;
 }
@@ -97,60 +103,6 @@ body{
   padding: 20px;
 }
 
-.purchaseAgreementForm label{
-
-}
-
-.purchaseAgreementForm input, textarea{
-
-}
-
-.buyerInfoContainer{
-
-}
-
-.sellerInfoContainer{
-
-}
-
-.productFormContainer{
-
-}
-
-.componentContainer{
-
-}
-
-.stepWrapper{
-
-}
-
-.buyerOneComponent{
-
-}
-
-.sellerOneComponent{
-
-}
-
-.objectOneComponent{
-
-}
-
-label{
-
-}
-
-.navigationGrid{
-  display: grid;
-  width: 40vw;
-  grid-template-columns: 20vw 20vw;
-  grid-template-rows: 20vh 20vh;
-  grid-template-areas: 
-  "step step"
-  "left right";
-}
-
 select{
   width: 200px;
   height: 30px;
@@ -163,10 +115,15 @@ select:hover{
 
 }
 
+.navigationBox{
+  display: flex;
+  justify-content: center;
+  height: 20px;
+}
+
 .navigationStepContainer{
-  grid-area: step;
   text-align: center;
-  margin: 20px;
+  justify-content: top;
 }
 
 .componentContainer{
@@ -177,7 +134,7 @@ select:hover{
   height: 300px;
   justify-content: center;
   align-content: center;
-  margin-top: 20px;
+  margin-top: 100px;
 }
 .signingType{
   justify-content: center;
@@ -211,6 +168,7 @@ select:hover{
 .stepWrapper{
   display: flex;
   justify-content: center;
+  align-content: center;
 }
 
 .stepBlock .circleWrapper{
@@ -221,7 +179,6 @@ select:hover{
 .selected .circle{
   color: white;
   background-color:black;
-  border-color: whitesmoke;
 }
 
 .stepBlock:not(:last-child) > .circleWrapper::after{

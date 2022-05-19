@@ -24,9 +24,12 @@ function App() {
 
   return (
     <div className="App">
-      <div className="header" onClick={Refresh}>
+      <div className="header">
+        <div className="logoContainer" onClick={Refresh}>
         <img className="logo" src={image} />
         <p className="logoText">EasyAgreements</p>
+        </div>
+        {renderNavButtons}
       </div>
       <div className="componentContainer">
         {(() => {
@@ -50,7 +53,6 @@ function App() {
           }
         })()}
       </div>
-      {renderNavButtons}
     </div>
   );
 }

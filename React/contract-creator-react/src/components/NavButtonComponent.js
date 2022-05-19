@@ -12,7 +12,7 @@ export default function NavButton(props) {
   return {
     currentStep,
     renderNavButtons: (
-      <div className="navigationGrid">
+      <div className="navigationBox">
         <div className="navigationStepContainer">
           <StepNavigationComponent
             labelArray={labelArray}
