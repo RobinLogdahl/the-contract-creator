@@ -6,6 +6,18 @@ body{
 
 }
 
+.logo{
+  width: 50px;
+  height: 35px;
+  justify-self: center;
+  align-self: center;
+  cursor: pointer;
+}
+
+.logoText{
+  cursor: pointer;
+}
+
 #root{
   background-color: white;
   font-size: 14px;
@@ -20,16 +32,23 @@ body{
 }
 
 .header{
+  color: black;
+  display: flex;
   grid-area: header;
   width: 100%;
-  align-content: center;
-  background-color: green;
-  justify-self: center;
-
+  height: 40px;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+  border-bottom: 1px solid;
+  font-size: 18px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  gap: 10px;
 }
 
 .navigationItems{
   width: 100%;
+  justify-content: center;
 }
 
 .newButton{
@@ -37,7 +56,7 @@ body{
   margin-left: auto;
   margin-right: auto;
   top: 406px;
-  left: 50%;
+  right: 36%;
   text-align: center;
 }
 
@@ -46,7 +65,7 @@ body{
   margin-left: auto;
   margin-right: auto;
   top: 406px;
-  left: 740px;
+  left: 36%;
   text-align: center;
 }
 
@@ -55,8 +74,47 @@ body{
   margin-left: auto;
   margin-right: auto;
   top: 406px;
-  left: 50%;
+  right: 36%;
   text-align: center;
+}
+
+.formContainer{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.purchaseAgreementForm{
+  font-size: 18px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  align-items: top;
+  box-shadow: 0 3px 10px 3px rgba(0, 0, 0, 0.393) ;
+  gap: 20px;
+  padding: 20px;
+}
+
+.purchaseAgreementForm label{
+
+}
+
+.purchaseAgreementForm input, textarea{
+
+}
+
+.buyerInfoContainer{
+
+}
+
+.sellerInfoContainer{
+
+}
+
+.productFormContainer{
+
 }
 
 .componentContainer{
@@ -83,32 +141,46 @@ label{
 
 }
 
-#form{
-  height: 200px
+.navigationGrid{
+  display: grid;
+  width: 40vw;
+  grid-template-columns: 20vw 20vw;
+  grid-template-rows: 20vh 20vh;
+  grid-template-areas: 
+  "step step"
+  "left right";
 }
 
 select{
   width: 200px;
   height: 30px;
-  color: white;
-  background-color: green;
+  color: black;
+  border: 1px solid black;
+  margin-top: 10px;
 }
 
 select:hover{
-  background-color: rgb(0, 140, 0);
+
 }
 
 .navigationStepContainer{
+  grid-area: step;
   text-align: center;
   margin: 20px;
 }
 
 .componentContainer{
+  font-size: 18px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
+  display: flex;
   height: 300px;
-  justify-self: center;
-  align-self: center;
-
+  justify-content: center;
+  align-content: center;
+  margin-top: 20px;
+}
+.signingType{
+  justify-content: center;
 }
 
 .navigationButtonContainer{
@@ -119,10 +191,10 @@ select:hover{
   width: 29px;
   height: 29px;
   line-height: 25px;
-  background-color: green;
-  color: white;
+  background-color: white;
+  color: black;
   border-radius:45%;
-  border: 2px solid transparent;
+  border: 1px solid black;
   cursor: pointer;
   margin-left: 20px;
   margin-right: 20px;
@@ -132,7 +204,8 @@ select:hover{
 }
 
 .circle:hover{
-  background-color: rgb(0, 140, 0);
+  transform: scale(1.15) perspective(1px);
+  color: black;
 }
 
 .stepWrapper{
@@ -146,9 +219,9 @@ select:hover{
 }
 
 .selected .circle{
-  color: black;
-  background-color:white;
-  border-color: green;
+  color: white;
+  background-color:black;
+  border-color: whitesmoke;
 }
 
 .stepBlock:not(:last-child) > .circleWrapper::after{
@@ -158,12 +231,14 @@ select:hover{
   position: absolute;
   top: 0px;
   bottom: 0px;
-  background-color: green;
+  background-color: black;
   margin: auto;
   z-index: -1;
+  transform: scale(1.15) perspective(1px);
 }
 .stepBlock:not(:last-child) >  .circleWrapper::after{
   height: 3px;
+  
 }
 .stepBlock:not(:last-child).selected > .circleWrapper::after, .stepBlock:not(:last-child).selected ~ .stepBlock:not(:last-child) > .circleWrapper::after{
   height: 2px;
@@ -171,14 +246,15 @@ select:hover{
 
 .primaryButton{
   padding: 10px 25px;
-  background-color: green;
+  background-color: white;
   border: none;
   margin: 10px;
-  color: white;
+  color: black;
   border-radius: 4px;
   cursor: pointer; 
   width: 200px;
+  border: 1px black solid;
 }
 .primaryButton:hover{
-  background-color: rgb(0, 140, 0);
+  transform: scale(1.05) perspective(1px)
 }

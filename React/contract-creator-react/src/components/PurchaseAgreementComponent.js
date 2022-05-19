@@ -65,7 +65,7 @@ function PurchaseAgreementComponent() {
   }
 
   return (
-    <div id="sdd">
+    <div id="formContainer">
       <div className="navigationItems">
       {(() => {
         switch (myBool) {
@@ -83,12 +83,9 @@ function PurchaseAgreementComponent() {
       })()}
       </div>
       <div id="htmlinsert">
-        <form id="form">
-          <p>Köparens uppgifter</p>
+        <form className="purchaseAgreementForm" id="form">
           {renderBuyer}
-          <p>Säljarens uppgifter</p>
           {renderSeller}
-          <p>Produkt</p>
           {renderObject}
         </form>
       </div>

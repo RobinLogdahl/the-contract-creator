@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./PurchaseAgreementComponent.css";
-import FormComponent from "./InputFormComponent";
+import FormComponent from "./FormComponent";
 
 function InputBuyerOne() {
   const [buyerName, setBuyerName] = useState("");
@@ -16,7 +16,8 @@ function InputBuyerOne() {
     buyerPhone,
 
     renderBuyer: (
-    <div className="buyerOneComponent">
+    <div className="buyerInfoContainer">
+      <p className="buyerInfo">Köparens uppgifter</p>
       <FormComponent
         label="För- och efternamn"
         id="buyerName"

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./PurchaseAgreementComponent.css";
-import FormComponent from "./InputFormComponent";
+import FormComponent from "./FormComponent";
 
 function InputRenterOne() {
     const [buyerName, setBuyerName] = useState("");

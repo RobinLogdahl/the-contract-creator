@@ -1,7 +1,7 @@
 import { useState, Fragment } from "react";
 import StepNavigationComponent from "./NavStepComponent";
 
-export default function NavigationButtonComponent(props) {
+export default function NavButton(props) {
   const labelArray = ["", "", "", ""];
   const [currentStep, updateCurrentStep] = useState(1);
 
@@ -10,9 +10,9 @@ export default function NavigationButtonComponent(props) {
   }
 
   return {
-      currentStep,
-      renderNavButtons: (
-      <Fragment>
+    currentStep,
+    renderNavButtons: (
+      <div className="navigationGrid">
         <div className="navigationStepContainer">
           <StepNavigationComponent
             labelArray={labelArray}
@@ -50,7 +50,7 @@ export default function NavigationButtonComponent(props) {
                     </button>
                   </div>
                 );
-                case 4:
+              case 4:
                 return (
                   <div className="navigationItems">
                     <button
@@ -68,7 +68,7 @@ export default function NavigationButtonComponent(props) {
             }
           })()}
         </div>
-      </Fragment>
+      </div>
     ),
   };
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./PurchaseAgreementComponent.css";
-import FormComponent from "./InputFormComponent";
+import FormComponent from "./FormComponent";
 
 function InputObject() {
     const [object, setObject] = useState("");
@@ -14,7 +14,8 @@ function InputObject() {
     other,
 
     renderObject: (
-      <div className="buyerOneComponent">
+      <div className="productFormContainer">
+        <p className="productInfo">Produkt info</p>
         <FormComponent
           label="Typ av produkt"
           id="object"

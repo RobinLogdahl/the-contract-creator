@@ -1,8 +1,11 @@
-import FormFetcherComponent from "./components/NavFormSelectComponent";
+import { useState } from "react";
+import StepNavigationComponent from "./components/NavStepComponent";
+import NavFormSelector from "./components/NavFormSelectorComponent";
 import useSelectAgreementComponent from "./components/SelectAgreementComponent";
 import useSelectPartiesComponent from "./components/SelectPartiesComponent";
 import useSelectSigningComponent from "./components/SelectSigningComponent";
-import NavigationButtonComponent from "./components/NavButtonComponent"
+import NavButton from "./components/NavButtonComponent"
+import image from "../src/images/agreementlogo.PNG";
 
 function App() {
   const { renderAgreementTypeDropDown, agreementType } =
@@ -12,12 +15,18 @@ function App() {
 
   const { renderSignTypeDropDown, signType } = useSelectSigningComponent();
 
-  const { renderNavButtons, currentStep } = NavigationButtonComponent();
+
+  const { renderNavButtons, currentStep } = NavButton();
+
+  const Refresh = () =>{
+    window.location.reload();
+  }
 
   return (
     <div className="App">
-      <div className="header">
-        <h1>Avtalsskaparen</h1>
+      <div className="header" onClick={Refresh}>
+        <img className="logo" src={image} />
+        <p className="logoText">EasyAgreements</p>
       </div>
       <div className="componentContainer">
         {(() => {
@@ -30,7 +39,7 @@ function App() {
               return <div className="signingType">{renderSignTypeDropDown}</div>
             case 4:
               return (
-                <FormFetcherComponent
+                <NavFormSelector
                   value1={agreementType}
                   value2={buyers}
                   value3={signType}
