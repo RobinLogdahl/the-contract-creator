@@ -5,6 +5,7 @@ import useSelectAgreementComponent from "./components/SelectAgreementComponent";
 import useSelectPartisComponent from "./components/SelectPartiesComponent";
 import useSelectSigningComponent from "./components/SelectSigningComponent";
 import ButtonNavigationComponent from "./components/ButtonNavigationComponent"
+import image from "../src/images/agreementlogo.PNG";
 
 function App() {
   const { renderAgreementTypeDropDown, agreementType } =
@@ -16,10 +17,15 @@ function App() {
 
   const { renderNavButtons, currentStep } = ButtonNavigationComponent();
 
+  const Refresh = () =>{
+    window.location.reload();
+  }
+
   return (
     <div className="App">
-      <div className="header">
-        <h1>Avtalsskaparen</h1>
+      <div className="header" onClick={Refresh}>
+        <img className="logo" src={image} />
+        <p className="logoText">EasyAgreements</p>
       </div>
       <div className="componentContainer">
         {(() => {

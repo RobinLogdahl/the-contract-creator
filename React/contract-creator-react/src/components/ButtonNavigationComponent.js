@@ -10,9 +10,9 @@ export default function ButtonNavigationComponent(props) {
   }
 
   return {
-      currentStep,
-      renderNavButtons: (
-      <Fragment>
+    currentStep,
+    renderNavButtons: (
+      <div className="navigationGrid">
         <div className="navigationStepContainer">
           <StepNavigationComponent
             labelArray={labelArray}
@@ -50,7 +50,7 @@ export default function ButtonNavigationComponent(props) {
                     </button>
                   </div>
                 );
-                case 4:
+              case 4:
                 return (
                   <div className="navigationItems">
                     <button
@@ -68,7 +68,7 @@ export default function ButtonNavigationComponent(props) {
             }
           })()}
         </div>
-      </Fragment>
+      </div>
     ),
   };
 }
