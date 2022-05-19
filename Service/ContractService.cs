@@ -95,6 +95,57 @@ namespace Service
             return result;
         }
 
+        public string RentalAgreementCreatorTwoBuyers(RentalAgreementTwoBuyersDTO contract)
+        {
+            string path = "..\\rental-agreement-two-buyers.html";
+
+            string[] sourceArr = File.ReadAllLines(path);
+
+            string source = String.Concat(sourceArr);
+
+            var template = Handlebars.Compile(source);
+
+            var data = new
+            {
+                buyerName = contract.BuyerName,
+                buyerSocial = contract.BuyerSocialSecurity,
+                buyerAddress = contract.BuyerAddress,
+                buyerPostalCode = contract.BuyerPostalCode,
+                buyerCity = contract.BuyerCity,
+                buyerPhone = contract.BuyerPhone,
+                buyerEmail = contract.BuyerEmail,
+
+                buyerName2 = contract.BuyerName2,
+                buyerSocial2 = contract.BuyerSocialSecurity2,
+                buyerAddress2 = contract.BuyerAddress2,
+                buyerPostalCode2 = contract.BuyerPostalCode2,
+                buyerCity2 = contract.BuyerCity2,
+                buyerPhone2 = contract.BuyerPhone2,
+                buyerEmail2 = contract.BuyerEmail2,
+
+                sellerName = contract.SellerName,
+                sellerSocial = contract.SellerSocialSecurity,
+                sellerAddress = contract.SellerAddress,
+                sellerPostalCode = contract.SellerPostalCode,
+                sellerCity = contract.SellerCity,
+                sellerPhone = contract.SellerPhone,
+                sellerEmail = contract.SellerEmail,
+
+
+                objectName = contract.ObjectName,
+                objectNumber = contract.ObjectNumber,
+                objectAddress = contract.ObjectAddress,
+                objectPrice = contract.Price,
+                objectArea = contract.Area,
+                objectAmountOfRooms = contract.AmountOfRooms,
+                objectPurpose = contract.Purpose,
+                objectOtherInfo = contract.Other
+            };
+
+            var result = template(data);
+            return result;
+        }
+
         public string GenerateDynamicContract(BuyerDTO buyer, SellerDTO seller)
         {
             var header = FileToString("contract-header");

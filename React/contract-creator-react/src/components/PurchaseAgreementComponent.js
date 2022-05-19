@@ -71,7 +71,7 @@ function PurchaseAgreementComponent() {
         switch (myBool) {
           case false:
             return (
-                <button className="primaryButton newButton" onClick={handleButtonClicked}>Generera Avtal</button>
+                <button className="primaryButton newButton" onClick={handleButtonClicked}>Visa Förhandsvisning</button>
               );
           case true:
             return (

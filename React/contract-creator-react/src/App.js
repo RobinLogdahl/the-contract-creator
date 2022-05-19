@@ -1,14 +1,14 @@
-import FormFetcherComponent from "./components/NavigationFormFetcherComponent";
+import FormFetcherComponent from "./components/NavFormSelectComponent";
 import useSelectAgreementComponent from "./components/SelectAgreementComponent";
-import useSelectPartisComponent from "./components/SelectPartiesComponent";
+import useSelectPartiesComponent from "./components/SelectPartiesComponent";
 import useSelectSigningComponent from "./components/SelectSigningComponent";
-import NavigationButtonComponent from "./components/NavigationButtonComponent"
+import NavigationButtonComponent from "./components/NavButtonComponent"
 
 function App() {
   const { renderAgreementTypeDropDown, agreementType } =
     useSelectAgreementComponent();
 
-  const { renderNumberOfBuyersDropDown, buyers } = useSelectPartisComponent();
+  const { renderNumberOfBuyersDropDown, buyers } = useSelectPartiesComponent();
 
   const { renderSignTypeDropDown, signType } = useSelectSigningComponent();
 

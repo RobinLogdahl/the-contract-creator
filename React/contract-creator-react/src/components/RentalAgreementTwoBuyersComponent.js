@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./PurchaseAgreementComponent.css";
 import InputRenterOne from "./InputRenterOneComponent";
+import InputRenterTwo from "./InputRenterTwoComponent"
 import InputLandlordOne from "./InputLandlordOneComponent";
 import InputRenterObject from "./InputRenterObjectComponent";
 import SaveToPDFComponent from "./SaveToPDFComponent";
@@ -11,7 +12,7 @@ function RentalAgreementTwoBuyersComponent() {
 
   const {
     renderPDFButton
-  } =SaveToPDFComponent
+  } =SaveToPDFComponent();
 
   const {
     renderRenterOne,
@@ -25,7 +26,7 @@ function RentalAgreementTwoBuyersComponent() {
   } = InputRenterOne();
 
   const {
-    renderRenterOne2,
+    renderRenterTwo,
     buyerName2,
     buyerSocialSecurity2,
     buyerAddress2,
@@ -33,7 +34,7 @@ function RentalAgreementTwoBuyersComponent() {
     buyerCity2,
     buyerPhone2,
     buyerEmail2,
-  } = InputRenterOne();
+  } = InputRenterTwo();
 
   const {
     renderLandlordOne,
@@ -50,7 +51,7 @@ function RentalAgreementTwoBuyersComponent() {
     renderObject,
     objectName,
     objectNumber,
-    objectAdress,
+    objectAddress,
     objectPrice,
     objectArea,
     objectAmountOfRooms,
@@ -60,7 +61,7 @@ function RentalAgreementTwoBuyersComponent() {
 
   const handleButtonClicked = (event) => {
     event.preventDefault();
-    fetch("Skapa en ny fetch här", {
+    fetch("https://localhost:7029/Contract/rental-agreement-two-renters", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -87,7 +88,7 @@ function RentalAgreementTwoBuyersComponent() {
         sellerEmail: sellerEmail,
         objectName: objectName,
         objectNumber: objectNumber,
-        objectAdress: objectAdress,
+        objectAddress: objectAddress,
         objectPrice: objectPrice,
         objectArea: objectArea,
         objectAmountOfRooms: objectAmountOfRooms,
@@ -131,7 +132,7 @@ function RentalAgreementTwoBuyersComponent() {
           <p>Hyresgäst 1 uppgifter</p>
           {renderRenterOne}
           <p>Hyresgäst 2 uppgifter</p>
-          {renderRenterOne}
+          {renderRenterTwo}
           <p>Hyresvärd uppgifter</p>
           {renderLandlordOne}
           <p>Hyresobjekt</p>

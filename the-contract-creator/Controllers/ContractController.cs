@@ -35,18 +35,20 @@ namespace the_contract_creator.Controllers
                 return BadRequest(ex.Message);
             }
         }
-        //[HttpPost("test-agreement")]
-        //public IActionResult DynamicCreator(BuyerDTO buyer, SellerDTO seller)
-        //{
-        //    try
-        //    {
-        //        return Ok(ContractService.Instance.GenerateDynamicContract(buyer, seller));
 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest(ex.Message);
-        //    }
-        //}
+        [HttpPost("rental-agreement-two-renters")]
+        public IActionResult RentalAgreementTwoBuyers(RentalAgreementTwoBuyersDTO input)
+        {
+            try
+            {
+                return Ok(ContractService.Instance.RentalAgreementCreatorTwoBuyers(input));
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }

@@ -1,4 +1,4 @@
-import StepComponent from "./NavigationStepCounterComponent";
+import StepComponent from "./NavStepCounterComponent";
 
 
 export default function StepNavigationComponent(props) {

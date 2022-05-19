@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import DropdownComponent from "./NavigationDropdownComponent";
+import DropdownComponent from "./NavDropdownComponent";
 
 const useSelectAgreementComponent = () => {
   const [agreementType, setAgreementType] = useState("Köpeskontrakt");
