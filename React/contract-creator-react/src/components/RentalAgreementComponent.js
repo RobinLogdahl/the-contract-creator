@@ -110,12 +110,9 @@ function RentalAgreementComponent() {
       </div>
 
       <div id="htmlinsert">
-        <form id="form">
-          <p>Hyresgäst uppgifter</p>
+      <form className="rentalAgreementForm" id="form">
           {renderRenterOne}
-          <p>Hyresvärd uppgifter</p>
           {renderLandlordOne}
-          <p>Hyresobjekt</p>
           {renderObject}
         </form>
       </div>

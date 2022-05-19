@@ -26,9 +26,10 @@ function InputRenterObject() {
 
 
     renderObject: (
-        <div>
+      <div className="objectInfoContainer">
+        <p className="objectInfo">Hyresobjekt</p>
         <FormComponent
-          label="HyresObjektetets namn"
+          label="Fastighetsbetäckning"
           id="objectName"
           value={objectName}
           onChange={(e) => setObjectName(e.target.value)}
@@ -46,7 +47,7 @@ function InputRenterObject() {
           onChange={(e) => setObjectAddress(e.target.value)}
         />
         <FormComponent
-          label="Pris"
+          label="Pris/mån"
           id="objectPrice"
           value={objectPrice}
           onChange={(e) => setObjectPrice(e.target.value)}

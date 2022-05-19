@@ -4,13 +4,13 @@ import "./PurchaseAgreementComponent.css";
 import FormComponent from "./FormComponent";
 
 function InputRenterTwo() {
-    const [buyerName2, setBuyerName] = useState("");
-    const [buyerSocialSecurity2, setBuyerSocial] = useState("");
-    const [buyerAddress2, setBuyerAddress] = useState("");
-    const [buyerPostalCode2, setBuyerPostalCode] = useState("");
-    const [buyerCity2, setBuyerCity] = useState("");
-    const [buyerPhone2, setBuyerPhone] = useState("");
-    const [buyerEmail2, setBuyerEmail] = useState("");
+  const [buyerName2, setBuyerName] = useState("");
+  const [buyerSocialSecurity2, setBuyerSocial] = useState("");
+  const [buyerAddress2, setBuyerAddress] = useState("");
+  const [buyerPostalCode2, setBuyerPostalCode] = useState("");
+  const [buyerCity2, setBuyerCity] = useState("");
+  const [buyerPhone2, setBuyerPhone] = useState("");
+  const [buyerEmail2, setBuyerEmail] = useState("");
 
   return {
     buyerName2,
@@ -21,9 +21,9 @@ function InputRenterTwo() {
     buyerPhone2,
     buyerEmail2,
 
-
     renderRenterTwo: (
-        <div>
+      <div className="renter2InfoContainer">
+        <p className="renter2Info">Hyresgäst 2 uppgifter</p>
         <FormComponent
           label="För- och efternamn"
           id="buyerName"
@@ -66,7 +66,7 @@ function InputRenterTwo() {
           value={buyerEmail2}
           onChange={(e) => setBuyerEmail(e.target.value)}
         />
-        </div>
+      </div>
     ),
   };
 }
