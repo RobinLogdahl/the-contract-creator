@@ -2,7 +2,7 @@ import { useState } from "react";
 import StepNavigationComponent from "./components/NavStepComponent";
 import NavFormSelector from "./components/NavFormSelectorComponent";
 import useSelectAgreementComponent from "./components/SelectAgreementComponent";
-import useSelectPartisComponent from "./components/SelectPartiesComponent";
+import useSelectPartiesComponent from "./components/SelectPartiesComponent";
 import useSelectSigningComponent from "./components/SelectSigningComponent";
 import NavButton from "./components/NavButtonComponent"
 import image from "../src/images/agreementlogo.PNG";
@@ -11,9 +11,10 @@ function App() {
   const { renderAgreementTypeDropDown, agreementType } =
     useSelectAgreementComponent();
 
-  const { renderNumberOfBuyersDropDown, buyers } = useSelectPartisComponent();
+  const { renderNumberOfBuyersDropDown, buyers } = useSelectPartiesComponent();
 
   const { renderSignTypeDropDown, signType } = useSelectSigningComponent();
+
 
   const { renderNavButtons, currentStep } = NavButton();
 

@@ -6,7 +6,6 @@ import InputSellerOne from "./InputSellerOneComponent";
 import InputObject from "./InputObjectComponent";
 import SaveToPDFComponent from "./SaveToPDFComponent"
 
-
 function PurchaseAgreementComponent() {
   const [myBool, setBool] = useState(false);
 

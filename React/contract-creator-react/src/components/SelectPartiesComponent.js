@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import DropdownComponent from "./DropdownComponent";
+import DropdownComponent from "./NavDropdownComponent";
 
-const useSelectPartisComponent = () => {
+const useSelectPartiesComponent = () => {
   const [buyers, setBuyers] = useState("1");
 
   return {
@@ -21,4 +21,4 @@ const useSelectPartisComponent = () => {
   }
 };
 
-export default useSelectPartisComponent;
+export default useSelectPartiesComponent;

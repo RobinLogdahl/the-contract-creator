@@ -7,7 +7,7 @@ function InputRenterObject() {
 
     const [objectName, setObjectName] = useState("");
     const [objectNumber, setObjectNumber] = useState("");
-    const [objectAdress, setObjectAdress] = useState("");
+    const [objectAddress, setObjectAddress] = useState("");
     const [objectPrice, setObjectPrice] = useState("");
     const [objectArea, setObjectArea] = useState("");
     const [objectAmountOfRooms, setObjectAmountOfRooms] = useState("");
@@ -17,7 +17,7 @@ function InputRenterObject() {
   return {
     objectName,
     objectNumber,
-    objectAdress,
+    objectAddress,
     objectPrice,
     objectArea,
     objectAmountOfRooms,
@@ -42,8 +42,8 @@ function InputRenterObject() {
         <FormComponent
           label="Adress"
           id="objectName"
-          value={objectAdress}
-          onChange={(e) => setObjectAdress(e.target.value)}
+          value={objectAddress}
+          onChange={(e) => setObjectAddress(e.target.value)}
         />
         <FormComponent
           label="Pris"
