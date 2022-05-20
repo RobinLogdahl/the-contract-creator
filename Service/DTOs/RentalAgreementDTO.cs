@@ -27,10 +27,12 @@ namespace Service.DTOs
         public string? ObjectName { get; set; }
         public string? ObjectNumber { get; set; }
         public string? ObjectAddress { get; set; }
-        public double? Price { get; set; }
-        public double? Area  { get; set; }
-        public double? AmountOfRooms { get; set; }
-        public string? Purpose { get; set; }
+        public string? ObjectPostalCode { get; set; }
+        public string? ObjectCity { get; set; }
+        public string? ObjectPurpose { get; set; }
+        public double? ObjectPrice { get; set; }
+        public double? ObjectArea  { get; set; }
+        public double? ObjectAmountOfRooms { get; set; }
         public string? Other { get; set; }
     }
 }
