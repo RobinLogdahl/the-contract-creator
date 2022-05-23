@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import DropdownComponent from "./NavDropdownComponent";
+import CheckboxComponent from "./CheckboxComponent";
 
 const useSelectAgreementComponent = () => {
   const [agreementType, setAgreementType] = useState("Köpeskontrakt");
@@ -9,14 +9,12 @@ const useSelectAgreementComponent = () => {
     agreementType,
 
     renderAgreementTypeDropDown: (
-        <DropdownComponent
-          label="Avtalstyp"
-          options={[
-            { label: "Köpeskontrakt", value: "Köpeskontrakt" },
-            { label: "Hyreskontrakt", value: "Hyreskontrakt" },
-          ]}
-          onChange={(e) => setAgreementType(e.target.value)}
-        />
+        <CheckboxComponent 
+        label="Avtalstyp"
+        value="Köpesavtal"
+        id="Köpesavtal"
+        onChange={(e) => setAgreementType(e.target.value)}
+          />
     ),
   };
 };
