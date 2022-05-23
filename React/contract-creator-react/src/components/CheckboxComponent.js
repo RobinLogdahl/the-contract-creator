@@ -5,7 +5,7 @@ const CheckboxComponent = ({ label, value, id, onChange }) => {
         <fieldset>
             <legend>{label}</legend>
             <div>
-            <input type="checkbox" id={value} name={value} onChange={onChange} checked={value}
+            <input type="checkbox" id={value} name={value} onChange={onChange} checked={id}
              />
             <label htmlFor={id}>{id}</label>
             </div>
