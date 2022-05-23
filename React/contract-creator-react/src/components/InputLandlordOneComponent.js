@@ -4,22 +4,22 @@ import "./PurchaseAgreementComponent.css";
 import FormComponent from "./FormComponent";
 
 function InputLandlordOne() {
-  const [sellerName, setSellerName] = useState("");
-  const [sellerSocialSecurity, setSellerSocial] = useState("");
-  const [sellerAddress, setSellerAddress] = useState("");
-  const [sellerPostalCode, setSellerPostalCode] = useState("");
-  const [sellerCity, setSellerCity] = useState("");
-  const [sellerPhone, setSellerPhone] = useState("");
-  const [sellerEmail, setSellerEmail] = useState("");
+  const [landlordName, setLandlordName] = useState("");
+  const [landlordSocialSecurity, setLandlordSocial] = useState("");
+  const [landlordAddress, setLandlordAddress] = useState("");
+  const [landlordPostalCode, setLandlordPostalCode] = useState("");
+  const [landlordCity, setLandlordCity] = useState("");
+  const [landlordPhone, setLandlordPhone] = useState("");
+  const [landlordEmail, setLandlordEmail] = useState("");
 
   return {
-    sellerName,
-    sellerSocialSecurity,
-    sellerAddress,
-    sellerPostalCode,
-    sellerCity,
-    sellerPhone,
-    sellerEmail,
+    landlordName,
+    landlordSocialSecurity,
+    landlordAddress,
+    landlordPostalCode,
+    landlordCity,
+    landlordPhone,
+    landlordEmail,
 
     renderLandlordOne: (
       <div className="landlordInfoContainer">
@@ -27,44 +27,44 @@ function InputLandlordOne() {
         <FormComponent
           label="För- och efternamn"
           id="socialName"
-          value={sellerName}
-          onChange={(e) => setSellerName(e.target.value)}
+          value={landlordName}
+          onChange={(e) => setLandlordName(e.target.value)}
         />
         <FormComponent
           label="Personnummer"
           id="sellerSocialSecurity"
-          value={sellerSocialSecurity}
-          onChange={(e) => setSellerSocial(e.target.value)}
+          value={landlordSocialSecurity}
+          onChange={(e) => setLandlordSocial(e.target.value)}
         />
         <FormComponent
           label="Adress"
           id="sellerAddress"
-          value={sellerAddress}
-          onChange={(e) => setSellerAddress(e.target.value)}
+          value={landlordAddress}
+          onChange={(e) => setLandlordAddress(e.target.value)}
         />
         <FormComponent
           label="Postkod"
           id="sellerPostalCode"
-          value={sellerPostalCode}
-          onChange={(e) => setSellerPostalCode(e.target.value)}
+          value={landlordPostalCode}
+          onChange={(e) => setLandlordPostalCode(e.target.value)}
         />
         <FormComponent
           label="Stad"
           id="sellerCity"
-          value={sellerCity}
-          onChange={(e) => setSellerCity(e.target.value)}
+          value={landlordCity}
+          onChange={(e) => setLandlordCity(e.target.value)}
         />
         <FormComponent
           label="Telefon"
           id="sellerPhone"
-          value={sellerPhone}
-          onChange={(e) => setSellerPhone(e.target.value)}
+          value={landlordPhone}
+          onChange={(e) => setLandlordPhone(e.target.value)}
         />
         <FormComponent
           label="Email"
           id="sellerEmail"
-          value={sellerEmail}
-          onChange={(e) => setSellerEmail(e.target.value)}
+          value={landlordEmail}
+          onChange={(e) => setLandlordEmail(e.target.value)}
         />
       </div>
     ),

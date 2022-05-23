@@ -1,0 +1,452 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+.app{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.preview-container{
+    border: 2px dotted black;
+    width: 599.28px;
+    height: 845.89px;
+    margin: 40px;
+}
+.header-text{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.title-text{
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.contract-text{
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.input-text{
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.contract-container{
+    order: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 595.28px;
+    height: 841.89px;
+
+}
+.contract-header{
+    display: grid;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    margin-top: 3px;
+    grid-template-columns: 195px 395px;
+    grid-template-areas: 
+    "renter-title renter-name";
+}
+
+.renter-title{
+    grid-area: renter-title;
+}
+.renter-name{
+    grid-area: renter-name;
+}
+/*Buyer container*/
+.renter-container{
+    display: grid;
+    grid-template-columns: 163px 120px 163px 120px;
+    grid-template-rows: 20px 20px 20px 20px 20px 20px auto ;
+    grid-template-areas: 
+    "buyer-title        buyer-title       buyer-title2          buyer-title2"
+    "name               social            name2                      social2"
+    "name-value         social-value      name-value2          social-value2"
+    "address            address           address2                  address2"
+    "address-value      address-value     address-value2      address-value2"
+    "postal-code-value  city-value        postal-code-value2     city-value2"
+    "phone              phone             phone2                      phone2"
+    "phone-value        phone-value       phone-value2          phone-value2"
+    "email              email             email2                      email2"
+    "email-value        email-value       email-value2          email-value2"
+    ;
+    margin-top: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 3px;
+    gap: 0px;
+    border: 1px solid black;
+}
+.renter-title{
+    grid-area: buyer-title;
+    /* background-color: rgb(0, 255, 42); */
+}
+.renter-name{
+    grid-area: name;
+    /* background-color: aqua; */
+}
+.renter-name-value{
+    grid-area: name-value;
+    /* background-color: aqua; */
+}
+.renter-social{
+    grid-area: social;
+    /* background-color: rgb(0, 119, 255); */
+}
+.renter-social-value{
+    grid-area: social-value;
+    /* background-color: rgb(0, 119, 255); */
+}
+.renter-address{
+    grid-area: address;
+    /* background-color: rgb(217, 255, 0); */
+}
+.renter-address-value{
+    grid-area: address-value;
+    /* background-color: rgb(217, 255, 0); */
+}
+.renter-postal-code-value{
+    grid-area: postal-code-value;
+    /* background-color: rgb(217, 255, 0); */
+}
+.renter-city-value{
+    grid-area: city-value;
+    /* background-color: rgb(217, 255, 0); */
+}
+.renter-phone{
+    grid-area: phone;
+    /* background-color: rgb(255, 0, 255); */
+}
+.renter-phone-value{
+    grid-area: phone-value;
+    /* background-color: rgb(255, 0, 255); */
+}
+.renter-email{
+    grid-area: email;
+    /* background-color: rgb(255, 136, 0); */
+}
+.renter-email-value{
+    grid-area: email-value;
+    /* background-color: rgb(255, 136, 0); */
+}
+
+/*Renter 2*/
+.renter2-title{
+    grid-area: buyer-title2;
+    /* background-color: rgb(0, 132, 255); */
+}
+.renter2-name{
+    grid-area: name2;
+    /* background-color: rgb(30, 255, 0); */
+}
+.renter2-name-value{
+    grid-area: name-value2;
+    /* background-color: rgb(30, 255, 0); */
+}
+.renter2-social{
+    grid-area: social2;
+    /* background-color: rgb(255, 0, 0); */
+}
+.renter2-social-value{
+    grid-area: social-value2;
+    /* background-color: rgb(255, 0, 0); */
+}
+.renter2-address{
+    grid-area: address2;
+    /* background-color: rgb(255, 0, 179); */
+}
+.renter2-address-value{
+    grid-area: address-value2;
+    /* background-color: rgb(255, 0, 179); */
+}
+.renter2-postal-code-value{
+    grid-area: postal-code-value2;
+    /* background-color: rgb(255, 0, 179); */
+}
+.renter2-city-value{
+    grid-area: city-value2;
+    /* background-color: rgb(255, 0, 179); */
+}
+.renter2-phone{
+    grid-area: phone2;
+    /* background-color: rgb(187, 255, 0); */
+}
+.renter2-phone-value{
+    grid-area: phone-value2;
+    /* background-color: rgb(187, 255, 0); */
+}
+.renter2-email{
+    grid-area: email2;
+    /* background-color: rgb(0, 255, 136); */
+}
+.renter2-email-value{
+    grid-area: email-value2;
+    /* background-color: rgb(0, 255, 136); */
+}
+
+/* Seller container*/
+.landlord-container{
+    display: grid;
+    grid-template-columns: 195px 120px 190px;
+    grid-template-rows: 20px 20px 20px 20px 20px 20px auto ;
+    grid-template-areas: 
+    "seller-title      seller-title      seller-title"
+    "name              name                    social"
+    "name-value        name-value        social-value"
+    "address           address                address"
+    "address-value     postal-code-value   city-value"
+    "phone             email                    email"
+    "phone-value       email-value       email-value"
+    ;
+    margin-top: -1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 3px;
+    gap: 0px;
+    border: 1px solid black;
+}
+.landlord-title{
+    grid-area: seller-title;
+}
+.landlord-name{
+    grid-area: name;
+}
+.landlord-name-value{
+    grid-area: name-value;
+}
+.landlord-social{
+    grid-area: social;
+}
+.landlord-social-value{
+    grid-area: social-value;
+}
+.landlord-address{
+    grid-area: address;
+}
+.landlord-address-value{
+    grid-area: address-value;
+}
+.landlord-postal-code-value{
+    grid-area: postal-code-value;
+}
+.landlord-city-value{
+    grid-area: city-value;
+}
+.landlord-email{
+    grid-area: email;
+}
+.landlord-email-value{
+    grid-area: email-value;
+}
+.landlord-phone{
+    grid-area: phone;
+}
+.landlord-phone-value{
+    grid-area: phone-value;
+}
+
+/*Object container*/
+.rental-container{
+    display: grid;
+    grid-template-columns: 140px 120px 160px 140px;
+    grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 70px;
+    grid-template-areas: 
+    "product-title              product-title               product-title                  product-title"
+    "product                    product                     number                                number"
+    "product-value              product-value               number-value                    number-value"
+    "address                    address                     address                              address"
+    "address-value              address-value               address-value                  address-value"
+    "address-postal-code-value  address-postal-code-value   address-city-value        address-city-value"          
+    "extent                     extent                      extent                                extent"
+    "purpose                    purpose                     rooms                                   area"
+    "purpose-value              purpose-value               rooms-value                       area-value"
+    "price                      price                       price                                  price"
+    "price-value                price-value                 price-value                      price-value"
+    "product-info               product-info                product-info                    product-info" 
+    "product-info-value         product-info-value          product-info-value        product-info-value"
+    ;
+    margin-top: -1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 3px;
+    gap: 0px;
+    border: 1px solid black;
+}
+.rental-title{
+    grid-area: product-title;
+    /* background-color: brown; */
+}
+.rental-type{
+    grid-area: product;
+    /* background-color: rgb(42, 165, 69); */
+}
+.rental-type-value{
+    grid-area: product-value;
+    /* background-color: rgb(42, 165, 69); */
+}
+.rental-number{
+    grid-area: number;
+    /* background-color: rgb(42, 147, 165); */
+}
+.rental-number-value{
+    grid-area: number-value;
+    /* background-color: rgb(42, 147, 165); */
+}
+.rental-address{
+    grid-area: address;
+    /* background-color: blueviolet; */
+}
+.rental-address-value{
+    grid-area: address-value;
+    /* background-color: blueviolet; */
+}
+.rental-postal-code-value{
+    grid-area: address-postal-code-value;
+    /* background-color: blueviolet; */
+}
+.rental-city-value{
+    grid-area: address-city-value;
+    /* background-color: blueviolet; */
+}
+.rental-purpose{
+    grid-area: purpose;
+    /* background-color: rgb(43, 189, 226); */
+}
+.rental-purpose-value{
+    grid-area: purpose-value;
+    /* background-color: rgb(43, 189, 226); */
+}
+.rental-extent{
+    grid-area: extent;
+    /* background-color: rgb(43, 226, 43); */
+}
+.rental-amount-of-rooms{
+    grid-area: rooms;
+    /* background-color: rgb(226, 43, 43); */
+}
+.rental-amount-of-rooms-value{
+    grid-area: rooms-value;
+    /* background-color: rgb(226, 43, 43); */
+}
+.rental-area{
+    grid-area: area;
+    /* background-color: rgb(43, 61, 226); */
+}
+.rental-area-value{
+    grid-area: area-value;
+    /* background-color: rgb(43, 61, 226); */
+}
+.rental-price{
+    grid-area: price;
+    /* background-color: rgb(226, 43, 226); */
+}
+.rental-price-value{
+    grid-area: price-value;
+    /* background-color: rgb(226, 43, 226); */
+}
+.rental-info{
+    grid-area: product-info;
+    /* background-color: bisque; */
+}
+.rental-info-value{
+    grid-area: product-info-value;
+    border: 1px solid black;
+    margin-right: -6px;
+    margin-left: 1px;
+    /* background-color: rgb(196, 255, 196); */
+}
+
+/*Signing container*/
+.signing-container{
+    display: grid;
+    grid-template-columns: 190px 190px 190px;
+    grid-template-rows: 20px 20px 20px 20px 20px 20px 20px;
+    grid-template-areas: 
+    "renter1-place-date                renter2-place-date                              landlord-place-date"
+    "renter1-date-line                 renter2-date-line                                landlord-date-line"
+    "renter1-sign                      renter2-sign                                          landlord-sign"
+    "renter1-signing-line              renter2-signing-line                          landlord-signing-line"
+    "name-clarification-renter1        name-clarification-renter2              name-clarification-landlord"
+    "name-clarification-renter1-value  name-clarification-renter2-value  name-clarification-landlord-value"
+    ;
+    margin-top: 5px;
+    margin-left: 8px;
+    margin-right: 10px;
+    gap: 5px;
+}
+
+/*Signing line CSS*/
+.renter1-date-line, .renter1-signing-line, .renter2-date-line, .renter2-signing-line, .landlord-date-line, .landlord-signing-line{
+    margin-top: 20px;
+    width: 160px;
+    border-top: dotted  black;
+    border-bottom: none;
+}
+
+
+/*Renter1*/
+.renter1-place-date{
+    grid-area: renter1-place-date;
+}
+.renter1-date-line{
+    grid-area: renter1-date-line;
+}
+.renter1-sign{
+    grid-area: renter1-sign;
+}
+.renter1-signing-line{
+    grid-area: renter1-signing-line;
+}
+.name-clarification-renter1{
+    grid-area: name-clarification-renter1;
+}
+.name-clarification-renter1-value{
+    grid-area: name-clarification-renter1-value;
+    margin-top: 8px;
+}
+
+/*Renter2*/
+.renter2-place-date{
+    grid-area: renter2-place-date;
+}
+.renter2-date-line{
+    grid-area: renter2-date-line;
+}
+.renter2-sign{
+    grid-area: renter2-sign;
+}
+.renter2-signing-line{
+    grid-area: renter2-signing-line;
+}
+.name-clarification-renter2{
+    grid-area: name-clarification-renter2;
+}
+.name-clarification-renter2-value{
+    grid-area: name-clarification-renter2-value;
+    margin-top: 10px;
+}
+
+/*Landlord*/
+.landlord-place-date{
+    grid-area: landlord-place-date;
+}
+.landlord-date-line{
+    grid-area: landlord-date-line;
+}
+.landlord-sign{
+    grid-area: landlord-sign;
+}
+.landlord-signing-line{
+    grid-area: landlord-signing-line;
+}
+.name-clarification-landlord{
+    grid-area: name-clarification-landlord;
+}
+.name-clarification-landlord-value{
+    grid-area: name-clarification-landlord-value;
+    margin-top: 10px;
+}

@@ -26,13 +26,13 @@ function RentalAgreementComponent() {
 
   const {
     renderLandlordOne,
-    sellerName,
-    sellerSocialSecurity,
-    sellerAddress,
-    sellerPostalCode,
-    sellerCity,
-    sellerPhone,
-    sellerEmail,
+    landlordName,
+    landlordSocialSecurity,
+    landlordAddress,
+    landlordPostalCode,
+    landlordCity,
+    landlordPhone,
+    landlordEmail,
   } = InputLandlordOne();
 
   const {
@@ -65,18 +65,18 @@ function RentalAgreementComponent() {
         buyerPhone: buyerPhone,
         buyerEmail: buyerEmail,
 
-        sellerName: sellerName,
-        sellerSocialSecurity: sellerSocialSecurity,
-        sellerAddress: sellerAddress,
-        sellerPostalCode: sellerPostalCode,
-        sellerCity: sellerCity,
-        sellerPhone: sellerPhone,
-        sellerEmail: sellerEmail,
+        sellerName: landlordName,
+        sellerSocialSecurity: landlordSocialSecurity,
+        sellerAddress: landlordAddress,
+        sellerPostalCode: landlordPostalCode,
+        sellerCity: landlordCity,
+        sellerPhone: landlordPhone,
+        sellerEmail: landlordEmail,
 
         objectCity: objectCity,
         objectName: objectName,
         objectNumber: objectNumber,
-        objectAdress: objectAddress,
+        objectAddress: objectAddress,
         objectPostalCode: objectPostalCode,
         objectPrice: objectPrice,
         objectArea: objectArea,
