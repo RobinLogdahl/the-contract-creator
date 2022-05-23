@@ -8,6 +8,8 @@ function InputRenterObject() {
     const [objectName, setObjectName] = useState("");
     const [objectNumber, setObjectNumber] = useState("");
     const [objectAddress, setObjectAddress] = useState("");
+    const [objectPostalCode, setObjectPostalCode] = useState("");
+    const [objectCity, setObjectCity] = useState("");
     const [objectPrice, setObjectPrice] = useState("");
     const [objectArea, setObjectArea] = useState("");
     const [objectAmountOfRooms, setObjectAmountOfRooms] = useState("");
@@ -18,6 +20,8 @@ function InputRenterObject() {
     objectName,
     objectNumber,
     objectAddress,
+    objectPostalCode,
+    objectCity,
     objectPrice,
     objectArea,
     objectAmountOfRooms,
@@ -26,9 +30,10 @@ function InputRenterObject() {
 
 
     renderObject: (
-        <div>
+      <div className="objectInfoContainer">
+        <p className="objectInfo">Hyresobjekt</p>
         <FormComponent
-          label="HyresObjektetets namn"
+          label="Fastighetsbetäckning"
           id="objectName"
           value={objectName}
           onChange={(e) => setObjectName(e.target.value)}
@@ -41,12 +46,24 @@ function InputRenterObject() {
         />
         <FormComponent
           label="Adress"
-          id="objectName"
+          id="buyerAddress"
           value={objectAddress}
           onChange={(e) => setObjectAddress(e.target.value)}
         />
         <FormComponent
-          label="Pris"
+          label="Postkod"
+          id="buyerPostalCode"
+          value={objectPostalCode}
+          onChange={(e) => setObjectPostalCode(e.target.value)}
+        />
+        <FormComponent
+          label="Stad"
+          id="buyerCity"
+          value={objectCity}
+          onChange={(e) => setObjectCity(e.target.value)}
+        />
+        <FormComponent
+          label="Pris/mån"
           id="objectPrice"
           value={objectPrice}
           onChange={(e) => setObjectPrice(e.target.value)}

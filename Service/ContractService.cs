@@ -80,14 +80,15 @@ namespace Service
                 sellerPhone = contract.SellerPhone,
                 sellerEmail = contract.SellerEmail,
 
-
                 objectName = contract.ObjectName,
                 objectNumber = contract.ObjectNumber,
-                objectAddress = contract.ObjectAddress,
-                objectPrice = contract.Price,
-                objectArea = contract.Area,
-                objectAmountOfRooms = contract.AmountOfRooms,
-                objectPurpose = contract.Purpose,
+                rentalAddress = contract.ObjectAddress,
+                objectPostalCode = contract.ObjectPostalCode,
+                objectCity = contract.ObjectCity,
+                objectPurpose = contract.ObjectPurpose,
+                objectPrice = contract.ObjectPrice,
+                objectArea = contract.ObjectArea,
+                objectAmountOfRooms = contract.ObjectAmountOfRooms,
                 objectOtherInfo = contract.Other
             };
 

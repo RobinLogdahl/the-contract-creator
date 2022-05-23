@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./PurchaseAgreementComponent.css";
+import "./RentalAgreementComponent.css";
 import InputRenterOne from "./InputRenterOneComponent";
 import InputLandlordOne from "./InputLandlordOneComponent";
 import InputRenterObject from "./InputRenterObjectComponent";
@@ -39,13 +39,17 @@ function RentalAgreementComponent() {
     renderObject,
     objectName,
     objectNumber,
-    objectAdress,
+    objectAddress,
+    objectPostalCode,
+    objectCity,
     objectPrice,
     objectArea,
     objectAmountOfRooms,
     objectPurpose,
     other,
   } = InputRenterObject();
+
+  console.log(objectAddress)
 
   const handleButtonClicked = (event) => {
     event.preventDefault();
@@ -60,6 +64,7 @@ function RentalAgreementComponent() {
         buyerCity: buyerCity,
         buyerPhone: buyerPhone,
         buyerEmail: buyerEmail,
+
         sellerName: sellerName,
         sellerSocialSecurity: sellerSocialSecurity,
         sellerAddress: sellerAddress,
@@ -67,9 +72,12 @@ function RentalAgreementComponent() {
         sellerCity: sellerCity,
         sellerPhone: sellerPhone,
         sellerEmail: sellerEmail,
+
+        objectCity: objectCity,
         objectName: objectName,
         objectNumber: objectNumber,
-        objectAdress: objectAdress,
+        objectAdress: objectAddress,
+        objectPostalCode: objectPostalCode,
         objectPrice: objectPrice,
         objectArea: objectArea,
         objectAmountOfRooms: objectAmountOfRooms,
@@ -110,12 +118,9 @@ function RentalAgreementComponent() {
       </div>
 
       <div id="htmlinsert">
-        <form id="form">
-          <p>Hyresgäst uppgifter</p>
+      <form className="rentalAgreementForm" id="form">
           {renderRenterOne}
-          <p>Hyresvärd uppgifter</p>
           {renderLandlordOne}
-          <p>Hyresobjekt</p>
           {renderObject}
         </form>
       </div>

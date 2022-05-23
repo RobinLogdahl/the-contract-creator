@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./PurchaseAgreementComponent.css";
 import InputRenterOne from "./InputRenterOneComponent";
-import InputRenterTwo from "./InputRenterTwoComponent"
+import InputRenterTwo from "./InputRenterTwoComponent";
 import InputLandlordOne from "./InputLandlordOneComponent";
 import InputRenterObject from "./InputRenterObjectComponent";
 import SaveToPDFComponent from "./SaveToPDFComponent";
@@ -10,9 +10,7 @@ import SaveToPDFComponent from "./SaveToPDFComponent";
 function RentalAgreementTwoBuyersComponent() {
   const [myBool, setBool] = useState(false);
 
-  const {
-    renderPDFButton
-  } = SaveToPDFComponent
+  const { renderPDFButton } = SaveToPDFComponent;
 
   const {
     renderRenterOne,
@@ -106,36 +104,33 @@ function RentalAgreementTwoBuyersComponent() {
       .catch(function (err) {
         console.warn("Something went wrong.", err);
       });
-      setBool(true);
+    setBool(true);
   };
 
   return (
     <div id="sdd">
       <div>
-      {(() => {
-        switch (myBool) {
-          case false:
-            return (
-                <button className="primaryButton newButton" onClick={handleButtonClicked}>Visa Förhandsvisning</button>
+        {(() => {
+          switch (myBool) {
+            case false:
+              return (
+                <button
+                  className="primaryButton newButton"
+                  onClick={handleButtonClicked}
+                >
+                  Visa Förhandsvisning
+                </button>
               );
-          case true:
-            return (
-              <div>
-                {renderPDFButton}
-              </div>
-            );
-        }
-      })()}
+            case true:
+              return <div>{renderPDFButton}</div>;
+          }
+        })()}
       </div>
       <div id="htmlinsert">
-        <form id="form">
-          <p>Hyresgäst 1 uppgifter</p>
+        <form className="rentalAgreementForm" id="form">
           {renderRenterOne}
-          <p>Hyresgäst 2 uppgifter</p>
           {renderRenterTwo}
-          <p>Hyresvärd uppgifter</p>
           {renderLandlordOne}
-          <p>Hyresobjekt</p>
           {renderObject}
         </form>
       </div>

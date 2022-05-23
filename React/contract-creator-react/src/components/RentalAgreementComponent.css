@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+.app{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.preview-container{
+    border: 2px dotted black;
+    width: 599.28px;
+    height: 845.89px;
+    margin: 40px;
+}
+.header-text{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.title-text{
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.contract-text{
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.input-text{
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.contract-container{
+    order: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 595.28px;
+    height: 841.89px;
+
+}
+.contract-header{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    margin-top: 3px;
+}
+
+/*Buyer container*/
+.renter-container{
+    display: grid;
+    grid-template-columns: 195px 120px 190px;
+    grid-template-rows: 20px 20px 20px 20px 20px 20px auto ;
+    grid-template-areas: 
+    "buyer-title      buyer-title      buyer-title"
+    "name             name                  social"
+    "name-value       name-value      social-value"
+    "address          address              address"
+    "address-value    postal-code-value city-value"
+    "phone            email                  email"
+    "phone-value      email-value      email-value"
+    ;
+    margin-top: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    gap: 0px;
+    border: 1px solid black;
+}
+.renter-title{
+    grid-area: buyer-title;
+}
+.renter-name{
+    grid-area: name;
+}
+.renter-name-value{
+    grid-area: name-value;
+}
+.renter-social{
+    grid-area: social;
+}
+.renter-social-value{
+    grid-area: social-value;
+}
+.renter-address{
+    grid-area: address;
+}
+.renter-address-value{
+    grid-area: address-value;
+}
+.renter-postal-code-value{
+    grid-area: postal-code-value;
+}
+.renter-city-value{
+    grid-area: city-value;
+}
+.renter-email{
+    grid-area: email;
+}
+.renter-email-value{
+    grid-area: email-value;
+}
+.renter-phone{
+    grid-area: phone;
+}
+.renter-phone-value{
+    grid-area: phone-value;
+}
+
+/* Seller container*/
+.landlord-container{
+    display: grid;
+    grid-template-columns: 195px 120px 190px;
+    grid-template-rows: 20px 20px 20px 20px 20px 20px auto ;
+    grid-template-areas: 
+    "seller-title      seller-title      seller-title"
+    "name              name                    social"
+    "name-value        name-value        social-value"
+    "address           address                address"
+    "address-value     postal-code-value   city-value"
+    "phone             email                    email"
+    "phone-value       email-value       email-value"
+    ;
+    margin-top: -1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    gap: 0px;
+    border: 1px solid black;
+}
+.landlord-title{
+    grid-area: seller-title;
+}
+.landlord-name{
+    grid-area: name;
+}
+.landlord-name-value{
+    grid-area: name-value;
+}
+.landlord-social{
+    grid-area: social;
+}
+.landlord-social-value{
+    grid-area: social-value;
+}
+.landlord-address{
+    grid-area: address;
+}
+.landlord-address-value{
+    grid-area: address-value;
+}
+.landlord-postal-code-value{
+    grid-area: postal-code-value;
+}
+.landlord-city-value{
+    grid-area: city-value;
+}
+.landlord-email{
+    grid-area: email;
+}
+.landlord-email-value{
+    grid-area: email-value;
+}
+.landlord-phone{
+    grid-area: phone;
+}
+.landlord-phone-value{
+    grid-area: phone-value;
+}
+
+/*Object container*/
+.rental-container{
+    display: grid;
+    grid-template-columns: 160px 150px 120px 140px;
+    grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 70px;
+    grid-template-areas: 
+    "product-title          product-title          product-title                  product-title"
+    "product                product                number                                number"
+    "product-value          product-value          number-value                    number-value"
+    "address                address                address                              address"
+    "address-value          address-value          address-postal-code-value address-city-value"
+    "extent                 extent                 extent                                extent"
+    "purpose                rooms                  area                                   price"
+    "purpose-value          rooms-value            area-value                       price-value"
+    "product-info           product-info           product-info                    product-info" 
+    "product-info-value     product-info-value     product-info-value        product-info-value"
+    ;
+    margin-top: -1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    gap: 0px;
+    border: 1px solid black;
+}
+.rental-title{
+    grid-area: product-title;
+}
+.rental-type{
+    grid-area: product;
+}
+.rental-type-value{
+    grid-area: product-value;
+}
+.rental-number{
+    grid-area: number;
+}
+.rental-number-value{
+    grid-area: number-value;
+}
+.rental-address{
+    grid-area: address;
+}
+.rental-address-value{
+    grid-area: address-value;
+}
+.rental-postal-code-value{
+    grid-area: address-postal-code-value;
+}
+.rental-city-value{
+    grid-area: address-city-value;
+}
+.rental-purpose{
+    grid-area: purpose;
+}
+.rental-purpose-value{
+    grid-area: purpose-value;
+}
+.rental-extent{
+    grid-area: extent;
+}
+.rental-amount-of-rooms{
+    grid-area: rooms;
+}
+.rental-amount-of-rooms-value{
+    grid-area: rooms-value;
+}
+.rental-area{
+    grid-area: area;
+}
+.rental-area-value{
+    grid-area: area-value;
+}
+.rental-price{
+    grid-area: price;
+}
+.rental-price-value{
+    grid-area: price-value;
+}
+.rental-info{
+    grid-area: product-info;
+}
+.rental-info-value{
+    grid-area: product-info-value;
+    padding: 2px;
+    border: 1px solid black;
+    margin-right: 7px;
+}
+
+/*Signing container*/
+.signing-container{
+    display: grid;
+    grid-template-areas: 
+    "seller-place-date                                     buyer-place-date"
+    "seller-date-line                                       buyer-date-line"
+    "seller-sign                                                 buyer-sign"
+    "seller-signing-line                                 buyer-signing-line"
+    "name-clarification-seller                     name-clarification-buyer"
+    "name-clarification-seller-value         name-clarification-buyer-value"
+    ;
+    grid-template-columns: 300px;
+    margin-top: 75px;
+    gap: 5px;
+    width: fit-content;
+}
+.seller-date-line, .buyer-date-line, .seller-signing-line, .buyer-signing-line{
+    margin-top: 30px;
+    width: 200px;
+    border-top: dotted  black;
+    border-bottom: none;
+}
+.seller-place-date{
+    grid-area: seller-place-date;
+}
+.seller-date-line{
+    grid-area: seller-date-line;
+}
+.buyer-place-date{
+    grid-area: buyer-place-date;
+}
+.buyer-date-line{
+    grid-area: buyer-date-line;
+}
+.seller-sign{
+    grid-area: seller-sign;
+}
+.seller-signing-line{
+    grid-area: seller-signing-line;
+
+}
+.buyer-sign{
+    grid-area: buyer-sign;
+}
+.buyer-signing-line{
+    grid-area: buyer-signing-line;
+}
+.name-clarification-seller{
+    grid-area: name-clarification-seller;
+}
+.name-clarification-buyer{
+    grid-area: name-clarification-buyer;
+}
+.name-clarification-seller-value{
+    grid-area: name-clarification-seller-value; 
+}
+.name-clarification-buyer-value{
+    grid-area: name-clarification-buyer-value; 
+}

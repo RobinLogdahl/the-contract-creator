@@ -4,14 +4,13 @@ import "./PurchaseAgreementComponent.css";
 import FormComponent from "./FormComponent";
 
 function InputLandlordOne() {
-
-    const [sellerName, setSellerName] = useState("");
-    const [sellerSocialSecurity, setSellerSocial] = useState("");
-    const [sellerAddress, setSellerAddress] = useState("");
-    const [sellerPostalCode, setSellerPostalCode] = useState("");
-    const [sellerCity, setSellerCity] = useState("");
-    const [sellerPhone, setSellerPhone] = useState("");
-    const [sellerEmail, setSellerEmail] = useState("");
+  const [sellerName, setSellerName] = useState("");
+  const [sellerSocialSecurity, setSellerSocial] = useState("");
+  const [sellerAddress, setSellerAddress] = useState("");
+  const [sellerPostalCode, setSellerPostalCode] = useState("");
+  const [sellerCity, setSellerCity] = useState("");
+  const [sellerPhone, setSellerPhone] = useState("");
+  const [sellerEmail, setSellerEmail] = useState("");
 
   return {
     sellerName,
@@ -22,9 +21,9 @@ function InputLandlordOne() {
     sellerPhone,
     sellerEmail,
 
-
     renderLandlordOne: (
-        <div>
+      <div className="landlordInfoContainer">
+        <p className="landlordInfo">Hyresvärd uppgifter</p>
         <FormComponent
           label="För- och efternamn"
           id="socialName"
@@ -67,7 +66,7 @@ function InputLandlordOne() {
           value={sellerEmail}
           onChange={(e) => setSellerEmail(e.target.value)}
         />
-        </div>
+      </div>
     ),
   };
 }

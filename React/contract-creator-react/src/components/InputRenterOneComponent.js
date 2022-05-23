@@ -23,7 +23,8 @@ function InputRenterOne() {
 
 
     renderRenterOne: (
-        <div>
+        <div className="renterInfoContainer">
+          <p className="renterInfo">Hyresgäst uppgifter</p>
         <FormComponent
           label="För- och efternamn"
           id="buyerName"
