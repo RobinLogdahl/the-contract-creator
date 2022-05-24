@@ -194,12 +194,12 @@ button{
 .signing-container{
     display: grid;
     grid-template-areas: 
-    "seller-place-date buyer-place-date"
-    "seller-date-line buyer-date-line"
-    "seller-sign buyer-sign"
-    "seller-signing-line buyer-signing-line"
-    "name-clarification-seller name-clarification-buyer"
-    "name-clarification-seller-value name-clarification-buyer-value"
+    "seller-place-date                                buyer-place-date"
+    "seller-date-line                                  buyer-date-line"
+    "seller-sign                                            buyer-sign"
+    "seller-signing-line                            buyer-signing-line"
+    "name-clarification-seller                name-clarification-buyer"
+    "name-clarification-seller-value    name-clarification-buyer-value"
     ;
     grid-template-columns: 300px;
     margin: 20px;

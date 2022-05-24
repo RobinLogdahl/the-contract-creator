@@ -2,10 +2,9 @@
     <div class="preview-container">
         <div class="contract-container preview" id="contract-container">
             <div class="contract-header">
-                <p class="contract-title header-text">Hyreskontrakt</p> 
-                <p class="contract-object title-text">{{objectAddress}}</p>
+                <p class="contract-title header-text">Hyreskontrakt</p> <p class="contract-object header-text">{{objectAddress}}</p>
             </div>
-            <div class="renter-container">
+            <div class="renter1-container">
                 <p class="renter-title title-text">Hyresgäst</p>
                 <p class="renter-name contract-text">Namn</p>
                 <p class="renter-name-value input-text">{{buyerName}}</p>
@@ -20,7 +19,7 @@
                 <p class="renter-email contract-text">Email</p>
                 <p class="renter-email-value input-text">{{buyerEmail}}</p>
             </div>
-            <div class="landlord-container">
+            <div class="landlord1-container">
                 <p class="landlord-title title-text">Hyresvärd</p>
                 <p class="landlord-name contract-text">Namn</p>
                 <p class="landlord-name-value input-text">{{sellerName}}</p>
@@ -35,19 +34,19 @@
                 <p class="landlord-email contract-text">Email</p>
                 <p class="landlord-email-value input-text">{{sellerEmail}}</p>
             </div>
-            <div class="rental-container">
+            <div class="rental1-container">
                 <p class="rental-title title-text">Hyresobjekt</p>
                 <p class="rental-type contract-text">Fastighetbetäckning</p>
                 <p class="rental-type-value input-text">{{objectName}}</p>
                 <p class="rental-number contract-text">Lägenhetsnummer</p>
                 <p class="rental-number-value input-text">{{objectNumber}}</p>
-                <p class="rental-address contract-text">Postadress</p>
+                <p class="rental-address contract-text">Adress</p>
                 <p class="rental-address-value input-text"> {{objectAddress}}</p>
                 <p class="rental-postal-code-value input-text"> {{objectPostalCode}}</p>
                 <p class="rental-city-value input-text"> {{objectCity}}</p>
                 <p class="rental-purpose contract-text">Uthyrningens ändamål</p>
                 <p class="rental-purpose-value input-text">{{objectPurpose}}</p>
-                <p class="rental-extent contract-text">Hyresobjektets omfattning</p>
+                <p class="rental-extent title-text">Hyresobjektets omfattning</p>
                 <p class="rental-amount-of-rooms contract-text">Antal rum exkl. kök</p>
                 <p class="rental-amount-of-rooms-value input-text">{{objectAmountOfRooms}}</p>
                 <p class="rental-area contract-text">Total yta i kvm</p>
@@ -55,22 +54,22 @@
                 <p class="rental-price contract-text">Pris</p>
                 <p class="rental-price-value input-text">{{objectPrice}} kronor/mån</p>
                 <p class="rental-info contract-text">Annan information</p>
-                <p class="rental-info-value input-text">{{objectOtherInfo}}</p>
+                <p class="rental4-info-value input-text">{{objectOtherInfo}}</p>
             </div>
             <div class="contract-footer">
                 <p class="signing-area">
-                    <div class="signing-container">
+                    <div class="signing4-container">
                         <p class="seller-place-date contract-text">Ort, Datum:</p>
                         <hr class="seller-date-line">
-                        <p class="seller-sign contract-text">Namnteckning, Säljare:</p>
+                        <p class="seller-sign contract-text">Namnteckning, Hyresvärd:</p>
                         <hr class="seller-signing-line">
-                        <p class="name-clarification-seller contract-text">Namnförtydligande, Säljare:</p>
+                        <p class="name-clarification-seller contract-text">Namnförtydligande, Hyresvärd:</p>
                         <p class="name-clarification-seller-value input-text">{{sellerName}}</p>
                         <p class="buyer-place-date contract-text">Ort, Datum:</p>
                         <hr class="buyer-date-line">
-                        <p class="buyer-sign contract-text">Namnteckning, Köpare:</p>
+                        <p class="buyer-sign contract-text">Namnteckning, Hyresgäst:</p>
                         <hr class="buyer-signing-line">
-                        <p class="name-clarification-buyer contract-text">Namnförtydligande, Köpare:</p>
+                        <p class="name-clarification-buyer contract-text">Namnförtydligande, Hyresgäst:</p>
                         <p class="name-clarification-buyer-value input-text">{{buyerName}}</p>
                     </div>
             </div>

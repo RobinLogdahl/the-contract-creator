@@ -110,7 +110,6 @@ function RentalAgreementTwoBuyersComponent() {
         console.warn("Something went wrong.", err);
       });
     setBool(true);
-    debugger
   };
 
   return (
