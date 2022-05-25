@@ -10,7 +10,7 @@ import SaveToPDFComponent from "./SaveToPDFComponent";
 function RentalAgreementTwoBuyersComponent() {
   const [myBool, setBool] = useState(false);
 
-  const { renderPDFButton } = SaveToPDFComponent;
+  const { renderPDFButton } = SaveToPDFComponent();
 
   const {
     renderRenterOne,
