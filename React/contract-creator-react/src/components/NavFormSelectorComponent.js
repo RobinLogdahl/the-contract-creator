@@ -12,13 +12,13 @@ const NavFormSelector = (props) => {
   return (
     <div>
       {(() => {
-        if (value1 === "Köpeskontrakt" &&value2 === "1" &&value3 === "Skriftligt") {
+        if (value1 === "Köpesavtal" &&value2 === "1" &&value3 === "Skriftligt") {
           return <PurchaseAgreementComponent />;
         } 
-        else if (value1 === "Hyreskontrakt" &&value2 === "1" &&value3 === "Skriftligt") {
+        else if (value1 === "Hyresavtal" &&value2 === "1" &&value3 === "Skriftligt") {
           return <RentalAgreementComponent />;
         } 
-        else if (value1 === "Hyreskontrakt" &&value2 === "2" &&value3 === "Skriftligt") {
+        else if (value1 === "Hyresavtal" &&value2 === "2" &&value3 === "Skriftligt") {
           return <RentalAgreementTwoBuyersComponent />
         } 
         else {

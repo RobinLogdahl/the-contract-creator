@@ -12,10 +12,7 @@ function App() {
     useSelectAgreementComponent();
 
   const { renderNumberOfBuyersDropDown, buyers } = useSelectPartiesComponent();
-
   const { renderSignTypeDropDown, signType } = useSelectSigningComponent();
-
-
   const { renderNavButtons, currentStep } = NavButton();
 
   const Refresh = () =>{
