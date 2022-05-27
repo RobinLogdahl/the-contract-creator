@@ -5,20 +5,20 @@ const useSelectPartiesComponent = () => {
   const [buyers, setBuyers] = useState("1");
 
   const handleClick = (event) => {
-    const buy = document.getElementById("oneBuyer");
-    const hire = document.getElementById("twoBuyer");
+    const oneBuy = document.getElementById("oneBuyer");
+    const twoBuy = document.getElementById("twoBuyer");
 
-    if (buy.checked === true && hire.checked === false) {
+    if (oneBuy.checked === true && twoBuy.checked === false) {
       setBuyers(event.target.value);
       console.log(event.target.value);
-      hire.checked = false;
+      twoBuy.checked = false;
     }
-    if (hire.checked === true && buy.checked === false) {
+    if (twoBuy.checked === true && oneBuy.checked === false) {
       setBuyers(event.target.value);
       console.log(event.target.value);
-      buy.checked = false;
+      oneBuy.checked = false;
     }
-    if (hire.checked === true && buy.checked === true) {
+    if (twoBuy.checked === true && oneBuy.checked === true) {
       event.target.checked = false;
     }
   };

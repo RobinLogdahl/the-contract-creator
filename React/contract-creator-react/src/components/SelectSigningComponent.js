@@ -5,20 +5,20 @@ const useSelectSigningComponent = () => {
   const [signType, setSignType] = useState("Skriftligt");
 
   const handleClick = (event) => {
-    const buy = document.getElementById("papersign");
-    const hire = document.getElementById("esign");
+    const paper = document.getElementById("papersign");
+    const esign = document.getElementById("esign");
 
-    if (buy.checked === true && hire.checked === false) {
+    if (paper.checked === true && esign.checked === false) {
       setSignType(event.target.value);
       console.log(event.target.value);
-      hire.checked = false;
+      esign.checked = false;
     }
-    if (hire.checked === true && buy.checked === false) {
+    if (esign.checked === true && paper.checked === false) {
       setSignType(event.target.value);
       console.log(event.target.value);
-      buy.checked = false;
+      paper.checked = false;
     }
-    if (hire.checked === true && buy.checked === true) {
+    if (esign.checked === true && paper.checked === true) {
       event.target.checked = false;
     }
   };
