@@ -82,7 +82,7 @@ namespace Service
 
                 objectName = contract.ObjectName,
                 objectNumber = contract.ObjectNumber,
-                rentalAddress = contract.ObjectAddress,
+                objectAddress = contract.ObjectAddress,
                 objectPostalCode = contract.ObjectPostalCode,
                 objectCity = contract.ObjectCity,
                 objectPurpose = contract.ObjectPurpose,
@@ -108,21 +108,21 @@ namespace Service
 
             var data = new
             {
-                buyerName = contract.BuyerName,
-                buyerSocial = contract.BuyerSocialSecurity,
-                buyerAddress = contract.BuyerAddress,
-                buyerPostalCode = contract.BuyerPostalCode,
-                buyerCity = contract.BuyerCity,
-                buyerPhone = contract.BuyerPhone,
-                buyerEmail = contract.BuyerEmail,
+                renterName = contract.BuyerName,
+                renterSocial = contract.BuyerSocialSecurity,
+                renterAddress = contract.BuyerAddress,
+                renterPostalCode = contract.BuyerPostalCode,
+                renterCity = contract.BuyerCity,
+                renterPhone = contract.BuyerPhone,
+                renterEmail = contract.BuyerEmail,
 
-                buyerName2 = contract.BuyerName2,
-                buyerSocial2 = contract.BuyerSocialSecurity2,
-                buyerAddress2 = contract.BuyerAddress2,
-                buyerPostalCode2 = contract.BuyerPostalCode2,
-                buyerCity2 = contract.BuyerCity2,
-                buyerPhone2 = contract.BuyerPhone2,
-                buyerEmail2 = contract.BuyerEmail2,
+                renterName2 = contract.BuyerName2,
+                renterSocial2 = contract.BuyerSocialSecurity2,
+                renterAddress2 = contract.BuyerAddress2,
+                renterPostalCode2 = contract.BuyerPostalCode2,
+                renterCity2 = contract.BuyerCity2,
+                renterPhone2 = contract.BuyerPhone2,
+                renterEmail2 = contract.BuyerEmail2,
 
                 sellerName = contract.SellerName,
                 sellerSocial = contract.SellerSocialSecurity,
@@ -133,14 +133,16 @@ namespace Service
                 sellerEmail = contract.SellerEmail,
 
 
-                objectName = contract.ObjectName,
-                objectNumber = contract.ObjectNumber,
-                objectAddress = contract.ObjectAddress,
-                objectPrice = contract.Price,
-                objectArea = contract.Area,
-                objectAmountOfRooms = contract.AmountOfRooms,
-                objectPurpose = contract.Purpose,
-                objectOtherInfo = contract.Other
+                rentalName = contract.ObjectName,
+                rentalNumber = contract.ObjectNumber,
+                rentalAddress = contract.ObjectAddress,
+                rentalPostalCode = contract.ObjectPostalCode,
+                rentalCity = contract.ObjectCity,
+                rentalPurpose = contract.ObjectPurpose,
+                rentalPrice = contract.ObjectPrice,
+                rentalArea = contract.ObjectArea,
+                rentalAmountOfRooms = contract.ObjectAmountOfRooms,
+                rentalOtherInfo = contract.Other
             };
 
             var result = template(data);

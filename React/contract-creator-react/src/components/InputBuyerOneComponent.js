@@ -36,7 +36,6 @@ function InputBuyerOne() {
       <FormComponent
         label="Telefon"
         id="buyerPhone"
-        value={buyerPhone}
         onChange={(e) => setBuyerPhone(e.target.value)}
       />
     </div> 

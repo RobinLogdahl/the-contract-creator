@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./PurchaseAgreementComponent.css";
+import "./RentalAgreement2BuyersComponent.css";
 import InputRenterOne from "./InputRenterOneComponent";
 import InputRenterTwo from "./InputRenterTwoComponent";
 import InputLandlordOne from "./InputLandlordOneComponent";
@@ -10,7 +10,7 @@ import SaveToPDFComponent from "./SaveToPDFComponent";
 function RentalAgreementTwoBuyersComponent() {
   const [myBool, setBool] = useState(false);
 
-  const { renderPDFButton } = SaveToPDFComponent;
+  const { renderPDFButton } = SaveToPDFComponent();
 
   const {
     renderRenterOne,
@@ -36,20 +36,21 @@ function RentalAgreementTwoBuyersComponent() {
 
   const {
     renderLandlordOne,
-    sellerName,
-    sellerSocialSecurity,
-    sellerAddress,
-    sellerPostalCode,
-    sellerCity,
-    sellerPhone,
-    sellerEmail,
+    landlordName,
+    landlordSocialSecurity,
+    landlordAddress,
+    landlordPostalCode,
+    landlordCity,
+    landlordPhone,
+    landlordEmail,
   } = InputLandlordOne();
-
   const {
     renderObject,
     objectName,
     objectNumber,
     objectAddress,
+    objectPostalCode,
+    objectCity,
     objectPrice,
     objectArea,
     objectAmountOfRooms,
@@ -77,16 +78,20 @@ function RentalAgreementTwoBuyersComponent() {
         buyerCity2: buyerCity2,
         buyerPhone2: buyerPhone2,
         buyerEmail2: buyerEmail2,
-        sellerName: sellerName,
-        sellerSocialSecurity: sellerSocialSecurity,
-        sellerAddress: sellerAddress,
-        sellerPostalCode: sellerPostalCode,
-        sellerCity: sellerCity,
-        sellerPhone: sellerPhone,
-        sellerEmail: sellerEmail,
+
+        sellerName: landlordName,
+        sellerSocialSecurity: landlordSocialSecurity,
+        sellerAddress: landlordAddress,
+        sellerPostalCode: landlordPostalCode,
+        sellerCity: landlordCity,
+        sellerPhone: landlordPhone,
+        sellerEmail: landlordEmail,
+
+        objectCity: objectCity,
         objectName: objectName,
         objectNumber: objectNumber,
         objectAddress: objectAddress,
+        objectPostalCode: objectPostalCode,
         objectPrice: objectPrice,
         objectArea: objectArea,
         objectAmountOfRooms: objectAmountOfRooms,
@@ -110,21 +115,20 @@ function RentalAgreementTwoBuyersComponent() {
   return (
     <div id="sdd">
       <div>
-        {(() => {
-          switch (myBool) {
-            case false:
-              return (
-                <button
-                  className="primaryButton newButton"
-                  onClick={handleButtonClicked}
-                >
-                  Visa Förhandsvisning
-                </button>
+      {(() => {
+        switch (myBool) {
+          case false:
+            return (
+                <button className="primaryButton newButton" onClick={handleButtonClicked}>Visa Förhandsvisning</button>
               );
-            case true:
-              return <div>{renderPDFButton}</div>;
-          }
-        })()}
+          case true:
+            return (
+              <div>
+                {renderPDFButton}
+              </div>
+            );
+        }
+      })()}
       </div>
       <div id="htmlinsert">
         <form className="rentalAgreementForm" id="form">
